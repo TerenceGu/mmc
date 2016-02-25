@@ -3,6 +3,8 @@
 使用koa作web框架, 使用eslint + airbnb/javascript处理代码风格, mocha 单元测试框架,
 chai做断言库
 
+模板引擎采用handlebars
+
 工程目录结构大致说明
 ````
 project
@@ -29,8 +31,6 @@ project
 |---lib 一些封装的库，过大的话可能会独立成npm模块
 |   |
 |---|---util 
-|   |
-|---|---static-resources.js 对静态资源表的处理
 |
 |---routes 路由模块
 |

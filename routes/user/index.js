@@ -4,7 +4,14 @@
 const router = require('koa-router')();
 
 router.get('/:id', function*() {
-  this.body = 'hello, it\'s yuji!';
+    yield this.render('hello', {
+        people: [
+            {firstName: 'Yehuda', lastName: 'Katz' },
+            {firstName: 'Carl', lastName: 'Lerche' },
+            {firstName: 'Alan', lastName: 'Johnson' },
+        ],
+        name: this.req.url
+    });
 });
 
 module.exports = router;
