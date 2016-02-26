@@ -5,6 +5,15 @@ chai做断言库
 
 模板引擎采用handlebars
 
+测试运行:
+````
+
+npm install
+npm run build (windows上这步有点问题，要把生成的front/dist/map.json 里面的\\全部改成 /)
+npm start
+````
+然后浏览器访问`http://localhost:4000/user/123`
+
 工程目录结构大致说明
 ````
 project

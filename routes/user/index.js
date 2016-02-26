@@ -10,7 +10,8 @@ router.get('/:id', function*() {
             {firstName: 'Carl', lastName: 'Lerche' },
             {firstName: 'Alan', lastName: 'Johnson' },
         ],
-        name: this.req.url
+        name: this.req.url,
+        lang: 'en'
     });
 });
 

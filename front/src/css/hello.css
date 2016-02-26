@@ -1,0 +1,6 @@
+ul{
+    list-style: none;
+    background-image: url(../images/a.jpg);
+    background-size: cover;
+    height: 400px;
+}

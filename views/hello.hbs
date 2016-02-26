@@ -1,3 +1,11 @@
+{{!< default }}
+{{#contentFor    "css"}}
+    {{{css "css/hello.css"}}}
+{{/contentFor}}
+
+{{#contentFor  "sidebar"}}
+    Extended content!
+{{/contentFor}}
 
 <h1>
     Hello, {{name}}!
@@ -7,5 +15,3 @@
     {{firstName}}
     {{lastName}}
 {{/list}}
-
-{{!< default }}

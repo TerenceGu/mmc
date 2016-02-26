@@ -12,6 +12,8 @@ const app = koa();
 
 app.use(logger());
 
+app.use(require('koa-static')(path.join(__dirname, 'front', 'dist')));
+
 app.use(hbs.middleware({
   viewPath: path.join(__dirname, 'views'),
   layoutsPath: path.join(__dirname, 'views', 'layout'),
@@ -20,7 +22,10 @@ app.use(hbs.middleware({
 app.use(router.routes());
 
 app.use(function *() {
-  this.body = 'Hello World';
+  this.status = 404;
+  yield this.render('404', {
+    lang: 'en'
+  });
 });
 
 module.exports = app;

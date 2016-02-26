@@ -5,4 +5,4 @@ const app = require('../app');
 const config = require('../config');
 
 http.createServer(app.callback())
-  .listen(config.port);
+  .listen(config.port, config.hostname);

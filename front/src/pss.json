@@ -1,0 +1,13 @@
+{
+  "rootPath":".",
+  "uriConfig": {
+    "baseUri":"localhost:4000",
+    "protocol":"http://",
+    "suffix":"?v=1"
+  },
+  "ignore":[[],[]],
+  "dir":["images","css"],
+  "mapJsonPath":"dist/map.json",
+  "outdir":"dist",
+  "logLevel": 0
+}
