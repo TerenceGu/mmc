@@ -5,12 +5,15 @@ chai做断言库
 
 模板引擎采用handlebars
 
+首先要安装nodejs
+
 测试运行:
 ````
-
-npm install
-npm run build (windows上这步有点问题，要把生成的front/dist/map.json 里面的\\全部改成 /)
-npm start
+1. 安装nodejs，注意版本要高于4
+2. git clone https://github.com/yujigali/sample.git 
+3. cd sample && npm install
+4. npm run build (windows上这步有点问题，要把生成的front/dist/map.json 里面的\\全部改成 /)
+5. npm start
 ````
 然后浏览器访问`http://localhost:4000/user/123`
 
