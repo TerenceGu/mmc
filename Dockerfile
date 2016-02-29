@@ -10,7 +10,7 @@ RUN apt-get -y install wget
 
 RUN wget http://nodejs.org/dist/v4.3.1/node-v4.3.1-linux-x64.tar.gz  && tar -zxvf node-v4.3.1-linux-x64.tar.gz
 
-RUN  cp -r ./node-v4.3.1-linux-x64 /usr/local  && rm -fr ./node-v4.3.1-linux-x64 && rm ./node-v4.3.1-linux-x64.tar.gz
+RUN  cd node-v4.3.1-linux-x64 && cp -r . /usr/local  && cd .. && rm -fr ./node-v4.3.1-linux-x64 && rm ./node-v4.3.1-linux-x64.tar.gz
 
 COPY . /usr/src/app
 
