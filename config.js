@@ -5,12 +5,14 @@
 
 const path = require('path');
 
+const port = process.env.PORT || 4000;
+
 module.exports = {
-  port: process.env.PORT || 4000,
+  port,
   mapJson: path.join(__dirname, 'front', 'dist', 'map.json'),
   hostname: process.env.HOST || '0.0.0.0',
   uri: {
-    baseUri: process.env.ADDRESS || 'localhost:4000',
+    baseUri: process.env.ADDRESS || 'localhost'.concat(port),
     protocol: '//',
     suffix: '',
   },
