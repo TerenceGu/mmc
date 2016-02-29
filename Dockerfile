@@ -8,7 +8,7 @@ RUN apt-get update
 
 RUN apt-get -y install wget
 
-RUN wget http://npm.taobao.org/mirrors/node/v4.3.1/node-v4.3.1-linux-x64.tar.gz  && tar -zxvf node-v4.3.1-linux-x64.tar.gz
+RUN wget https://nodejs.org/dist/v4.3.1/node-v4.3.1-linux-x64.tar.gz  && tar -zxvf node-v4.3.1-linux-x64.tar.gz
 
 RUN cd node-v4.3.1-linux-x64 && cp -r . /usr/local && rm -fr . && rm ../node-v4.3.1-linux-x64.tar.gz
 
