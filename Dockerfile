@@ -1,16 +1,16 @@
-FROM alpine
+FROM ubuntu:12.04
 
 MAINTAINER yuji
 
 ENV PORT 80
 
-RUN apk update && apk upgrade
+RUN apt-get update
 
 RUN apt-get -y install wget
 
 RUN wget http://npm.taobao.org/mirrors/node/v4.3.1/node-v4.3.1-linux-x64.tar.gz  && tar -zxvf node-v4.3.1-linux-x64.tar.gz
 
-RUN cd node-v4.3.1-linux-x64 && cp -r . /usr/local
+RUN cd node-v4.3.1-linux-x64 && cp -r . /usr/local && rm -fr . && rm ../node-v4.3.1-linux-x64.tar.gz
 
 COPY . /usr/src/app
 
