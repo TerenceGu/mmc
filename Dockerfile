@@ -8,7 +8,7 @@ RUN apt-get update
 
 RUN apt-get -y install wget
 
-RUN wget https://nodejs.org/dist/v4.3.1/node-v4.3.1-linux-x64.tar.gz  && tar -zxvf node-v4.3.1-linux-x64.tar.gz
+RUN wget http://nodejs.org/dist/v4.3.1/node-v4.3.1-linux-x64.tar.gz  && tar -zxvf node-v4.3.1-linux-x64.tar.gz
 
 RUN  cp -r ./node-v4.3.1-linux-x64 /usr/local  && rm -fr ./node-v4.3.1-linux-x64 && rm ./node-v4.3.1-linux-x64.tar.gz
 
