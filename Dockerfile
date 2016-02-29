@@ -1,8 +1,10 @@
-FROM ubuntu:14.04
+FROM alpine
 
 MAINTAINER yuji
 
 ENV PORT 80
+
+RUN apk update && apk upgrade
 
 RUN apt-get -y install wget
 
