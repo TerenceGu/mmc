@@ -24,7 +24,8 @@ app.use(router.routes());
 app.use(function *() {
   this.status = 404;
   yield this.render('404', {
-    lang: 'en'
+    lang: 'en',
+    title: '404'
   });
 });
 

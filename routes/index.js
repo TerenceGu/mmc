@@ -1,10 +1,6 @@
 /**
  * Created by Administrator on 2016/2/23.
  */
-const router = require('koa-router')();
+const exportController = require('../lib/util').exportController;
 
-const user = require('./user');
-
-router.use('/user', user.routes());
-
-module.exports = router;
+module.exports = exportController(__dirname);
