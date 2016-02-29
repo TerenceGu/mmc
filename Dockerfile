@@ -10,9 +10,11 @@ RUN wget http://npm.taobao.org/mirrors/node/v4.3.1/node-v4.3.1-linux-x64.tar.gz 
 
 RUN cd node-v4.3.1-linux-x64 && cp -r . /usr/local
 
-COPY . /usr/app
+COPY . /usr/src/app
 
 RUN cd /usr/src/app && npm install && npm run build
+
+WORKDIR /usr/src/app
 
 CMD ["npm", "start"]
 
