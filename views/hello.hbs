@@ -1,10 +1,7 @@
 {{!< default }}
-{{#contentFor    "css"}}
-    {{{css "css/hello.css"}}}
-{{/contentFor}}
 
-{{#contentFor  "sidebar"}}
-    这个就是所谓的模板继承
+{{#contentFor   "volatile-css"}}
+    {{{cssCombo "css/hello.css" "css/default.css"}}}
 {{/contentFor}}
 
 <h1>
