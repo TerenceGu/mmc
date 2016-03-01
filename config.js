@@ -6,15 +6,16 @@
 const path = require('path');
 
 const port = process.env.PORT || 4000;
+const hostname = process.env.HOST || '0.0.0.0';
 
 module.exports = {
   port,
   mapJson: path.join(__dirname, 'front', 'dist', 'map.json'),
-  hostname: process.env.HOST || '0.0.0.0',
+  hostname,
   uri: {
-    baseUri: process.env.STATIC_ADDRESS || 'localhost:'.concat(port),
+    baseUri: process.env.STATIC_ADDRESS || `127.0.0.1:${port}`,
     protocol: '//',
     suffix: '',
   },
-  domain: process.env.ADDRESS,
+  domain: process.env.ADDRESS || `//127.0.0.1:${port}/`,
 };

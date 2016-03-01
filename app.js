@@ -20,6 +20,11 @@ app.use(hbs.middleware({
   partialsPath: path.join(__dirname, 'views', 'partials'),
 }));
 
+app.use(function *(next) {
+  this.state.url = this.url;
+  yield next;
+});
+
 app.use(router.routes());
 
 app.use(function *() {
