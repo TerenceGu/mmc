@@ -52,6 +52,8 @@ project
 |
 |---views 用于存放模板文件, !!! 这个文件夹的位置不太确定， 可能之后会放在front/src 下
 |
+|---lang 暂定用于存放语言包，为了简化操作，使用yaml
+|
 |---.eslintrc eslint配置文件
 |
 |---.gitignore

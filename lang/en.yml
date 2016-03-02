@@ -1,0 +1,11 @@
+daily:
+  page:
+    title: 'New Arrivals: Women''s Fashion Clothing, Shoes & Accessories'
+    meta: 'NOINDEX, FOLLOW'
+  fashion:
+    title: 'WOMEN''S FASHION'
+  shop:
+    popular: 'New Arrivals'
+  price:
+    lh: 'Price Low To High'
+    hl: 'Price High To Low'
