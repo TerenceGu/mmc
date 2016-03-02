@@ -12,15 +12,14 @@ const app = koa();
 
 app.use(logger());
 
-if(process.env.NODE_ENV === 'production'){
+if (process.env.NODE_ENV === 'production') {
   app.use(require('koa-html-minifier')({
     collapseWhitespace: true,
     removeComments: true,
     removeCommentsFromCDATA: true,
-    minifyJS: true
+    minifyJS: true,
   }));
-}
-else{
+} else {
   app.use(require('koa-static')(path.join(__dirname, 'front', 'dist')));
 }
 
