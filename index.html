@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script src="fe/dist/component/ru/manifest.js"></script>
+    <script src="fe/dist/component/ru/react.js"></script>
+    <script src="fe/dist/bundle/ru/hello.js"></script>
+    <script>
+        window.reduxState.dispatch( {
+            type: 'FIRST_INIT',
+            value:{
+                text: 123
+            }
+        });
+    </script>
+    <script src="fe/dist/component/ru/first.js"></script>
+</body>
+</html>

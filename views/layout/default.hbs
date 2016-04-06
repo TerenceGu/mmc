@@ -11,26 +11,12 @@
     <meta name="keywords" content="{{seo.keywords}}" />
     <meta name="description" content="{{seo.description}}" />
     <link rel="canonical" href="{{seo.canonical}}">
-    <!--@TODO noscript会不会影响seo-->
-    <noscript>
-        <meta http-equiv="refresh" content="0;URL='{{noscriptLink url}}'"/>
-    </noscript>
-
     {{{faviconIco}}}
     <title>{{ title }}</title>
 
     <!--全局js和css-->
     {{> common/global-css-js}}
 
-    <!--本页各组件的css-->
-    {{#block "component-css"}}
-        {{{cssCombo "css/default.css"}}}
-    {{/block}}
-
-    <!--本页易变动的css-->
-    {{#block "volatile-css"}}
-        {{{css "css/default.css"}}}
-    {{/block}}
 
 </head>
 <body>
@@ -43,24 +29,4 @@
     </script>
     {{/block}}
 
-    <!--引入埋点代码-->
-    {{> common/bp}}
-
     {{{ body }}}
-
-    <!--引入框架-->
-    {{#block "js-framework"}}
-        {{{js ""}}}
-    {{/block}}
-    <!--组件相关js的引入-->
-    {{#block "js-component"}}
-        {{{js ""}}}
-    {{/block}}
-    <!--页面相关的js-->
-    {{#block "js-page"}}
-        <script>
-            //page related
-        </script>
-    {{/block}}
-</body>
-</html>

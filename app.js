@@ -4,13 +4,19 @@
 const koa = require('koa');
 const path = require('path');
 
+const logger = require('koa-logger');
+const favicon = require('koa-favicon');
+
 const router = require('./routes');
 const hbs = require('./lib/renderer');
-const logger = require('koa-logger');
+const bigPipe = require('./lib/new-render');
+
 
 const app = koa();
 
 app.use(logger());
+
+app.use(favicon(path.join(__dirname, 'fe', 'favicon.ico' )))
 
 //  根据环境变量设定是否压缩html代码以及设定静态文件服务器
 if (process.env.NODE_ENV === 'production') {
@@ -21,7 +27,7 @@ if (process.env.NODE_ENV === 'production') {
     minifyJS: true,
   }));
 } else {
-  app.use(require('koa-static')(path.join(__dirname, 'front', 'dist')));
+  app.use(require('koa-static')(path.join(__dirname, 'fe', 'dist')));
 }
 
 // 设定模板文件的路径, 注意这个也是支持优先级获取的哟
@@ -35,6 +41,8 @@ app.use(hbs.middleware({
   //  在非生产环境设定这个有利于动态修改模板
   disableCache: process.env.NODE_ENV !== 'production',
 }));
+
+app.use(bigPipe);
 
 app.use(function *(next) {
   this.state.url = this.url;

@@ -14,6 +14,14 @@ router.get('/:id', function*() {
         ],
         name: this.req.url,
         lang: 'en'
+    },{
+        first: new Promise(resolve=>{
+            setTimeout(() => {
+                resolve({
+                    text: 123
+                })
+            }, 100);
+        })
     });
 });
 

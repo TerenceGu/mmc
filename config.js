@@ -10,7 +10,7 @@ const hostname = process.env.HOST || '0.0.0.0';
 
 module.exports = {
   port,
-  mapJson: path.join(__dirname, 'front', 'dist', 'map.json'),
+  mapJson: path.join(__dirname, 'fe', 'dist'),
   hostname,
   uri: {
     baseUri: process.env.STATIC_ADDRESS || `localhost:${port}`,

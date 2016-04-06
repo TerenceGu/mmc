@@ -1,14 +1,11 @@
 {{!< default }}
 
-{{#contentFor   "volatile-css"}}
-    {{{cssCombo "css/hello.css" "css/default.css"}}}
-{{/contentFor}}
-
 <h1>
     Hello, {{name}}!
 </h1>
 
-{{#list people}}
-    {{firstName}}
-    {{lastName}}
-{{/list}}
+<div id="root">
+
+</div>
+
+<script src="/bundle/www/hello.js"></script>
