@@ -8,15 +8,14 @@ const router = exportController(__dirname);
 router.get('/i', function*() {
   this.state.lang = 'www';
   this.render('hello',{
-    name: 'i',
-    lang: 'www'
+    name: 'i'
   },{
     first: new Promise(resolve=>{
       setTimeout(() => {
         resolve({
           text: 123
         });
-      }, 1000);
+      }, 0);
     })
   });
 });
@@ -24,15 +23,14 @@ router.get('/i', function*() {
 router.get('/ii', function*() {
   this.state.lang = 'ru';
   this.render('hello',{
-    name: 'i',
-    lang: 'ru'
+    name: 'ii'
   },{
     first: new Promise(resolve=>{
       setTimeout(() => {
         resolve({
           text: 123
         });
-      }, 1000);
+      }, 0);
     })
   });
 });

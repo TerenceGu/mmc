@@ -5,7 +5,7 @@ export default (state=0, action) => {
   switch (action.type) {
     case 'FIRST_INIT':
       return action.value.text;
-    case 'TEXT_ONCLICK':
+    case 'FIRST_TEXT_ONCLICK':
       return state+1;
     default:
       return state;

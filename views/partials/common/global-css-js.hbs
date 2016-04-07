@@ -1,6 +1,10 @@
-<!--稳定的全局css，例如reset.css, header.css, footer.css-->
-{{{globalCss}}}
-<!--稳定的全局js，例如es6-shim, amd loader等-->
-<script src="/component/{{lang}}/manifest.js"></script>
-<script src="/component/{{lang}}/react.js"></script>
-{{{globalJs}}}
+<!--稳定的全局css，例如normalize.css-->
+{{{shimCss "normalize.min.css"}}}
+<!--稳定的全局js，例如shim-->
+<!--[if lte IE 9]>
+{{{shimJs "ie8-shim.min.js"}}}
+<![endif]-->
+{{{shimJs "es5-shim.min.js"}}}
+
+{{{js "manifest"}}}
+{{{js "react"}}}

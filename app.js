@@ -8,8 +8,8 @@ const logger = require('koa-logger');
 const favicon = require('koa-favicon');
 
 const router = require('./routes');
-const hbs = require('./lib/renderer');
-const bigPipe = require('./lib/new-render');
+const hbs = require('./lib/render/hbs');
+const bigPipe = require('./lib/render/big-pipe');
 
 
 const app = koa();
@@ -54,10 +54,10 @@ app.use(router.routes());
 
 app.use(function *() {
   this.status = 404;
-  yield this.render('404', {
-    lang: 'en',
+  this.render('404', {
+    lang: 'www',
     title: '404',
-    nofollow: true,
+    nofollow: true
   });
 });
 

@@ -13,9 +13,8 @@ module.exports = {
   mapJson: path.join(__dirname, 'fe', 'dist'),
   hostname,
   uri: {
-    baseUri: process.env.STATIC_ADDRESS || `localhost:${port}`,
-    protocol: '//',
-    suffix: '',
+    baseUri: process.env.STATIC_ADDRESS || `localhost:${port}/`,
+    protocol: '//'
   },
   domain: process.env.ADDRESS || `//localhost:${port}/`
 };

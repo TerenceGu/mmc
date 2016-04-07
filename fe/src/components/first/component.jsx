@@ -8,7 +8,7 @@ import { connect, Provider } from 'react-redux';
 import styles from './style.scss';
 import classAppendLangSpec from '../../vendor/dom-class-append-lang-specific';
 
-import { textOnClick } from '../../actions/index';
+import { textOnClick } from './actions';
 
 class Hello extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class Hello extends React.Component {
   render() {
     return (
       <div className={classAppendLangSpec('hello', styles)} onClick={this.props.onClick}>
-        You've clicked {this.props.text} times!
+        You've clicked {this.props.text} times!~~
       </div>
     )
   }

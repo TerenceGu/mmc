@@ -6,14 +6,15 @@ const exportController = require('lt-util').exportController;
 const router = exportController(__dirname);
 
 router.get('/:id', function*() {
-    yield this.render('hello', {
+    this.state.lang = 'www';
+    this.render('hello', {
         people: [
             {firstName: 'Yehuda', lastName: 'Katz' },
             {firstName: 'Carl', lastName: 'Lerche' },
-            {firstName: 'Alan', lastName: 'Johnson' },
+            {firstName: 'Alan', lastName: 'Johnson'}
         ],
         name: this.req.url,
-        lang: 'en'
+        lang: 'www'
     },{
         first: new Promise(resolve=>{
             setTimeout(() => {
