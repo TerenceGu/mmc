@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.3",
+    "co": "^4.6.0",
     "es5-shim": "^4.5.7",
     "form-data": "^1.0.0-rc3",
     "glob": "^7.0.3",
