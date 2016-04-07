@@ -16,7 +16,7 @@ RUN cd .. && rm -fr ./node-v4.3.1-linux-x64 && rm ./node-v4.3.1-linux-x64.tar.gz
 
 COPY . /usr/src/app
 
-RUN cd /usr/src/app && npm install && npm run build
+RUN cd /usr/src/app && npm install
 
 WORKDIR /usr/src/app
 
