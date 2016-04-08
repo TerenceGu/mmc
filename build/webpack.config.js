@@ -86,7 +86,7 @@ module.exports = Object.keys(languages).map(locale => ({
       minChunks: Infinity,
       filename: path.join(locale,'[name].[chunkhash:8].js')
     }),
-    new ExtractTextPlugin(path.join(locale, '[name].[chunkhash:8].css')),
+    new ExtractTextPlugin(path.join(locale, '[name].[contenthash:8].css')),
     function() {
       this.plugin("done", function(stats) {
         mkdirp(mapPath);

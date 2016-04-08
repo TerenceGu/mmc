@@ -14,13 +14,17 @@
     {{{faviconIco}}}
     <title>{{ title }}</title>
 
-    <!--全局js和css-->
-    {{> common/global-css-js}}
+    <!--稳定的全局css，例如normalize.css-->
+    {{{shimCss "normalize.min.css"}}}
     <!--页面布局css和组件的css-->
-    {{#block "page-css"}}
+    {{{cssForPage}}}
+    <!--稳定的全局js，例如shim-->
+    <!--[if lte IE 9]>
+    {{{shimJs "ie8-shim.min.js"}}}
+    <![endif]-->
+    {{{shimJs "es5-shim.min.js"}}}
 
-    {{/block}}
-
+    {{{js "manifest"}}}
 </head>
 <body>
 
@@ -34,3 +38,6 @@
 
     {{{ body }}}
 
+    {{{js "react"}}}
+<!-- page.js -->
+    {{{jsForPage}}}
