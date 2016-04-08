@@ -101,7 +101,7 @@ project
  component之间不能有依赖, 只能依赖common或者node——modules中的东西.
 
 2. 页面, 也就是`pages`下的一个文件夹, 必须有一个`entry.jsx`, 主要是用于
-引入需要的reducer, 之后创建一个store挂载到全局`window`上.
+引入需要的reducer, 之后创建一个store挂载到全局`window`上. page的布局文件可以就近书写.
 
 3. 在增加一个页面时, 分为两部分. 第一部分是用于定位的模板文件(用于存放首屏以及header需要
 的东西); 第二部分是各个组件, 组件一般都需要一个初始化数据, 约定其actionType为`{NAME}_INIT`.
