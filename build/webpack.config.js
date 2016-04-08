@@ -4,6 +4,7 @@
 'use strict';
 const webpack = require('webpack');
 const I18nPlugin = require('i18n-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 const mkdirp = require('mkdirp');
 
@@ -41,16 +42,13 @@ module.exports = Object.keys(languages).map(locale => ({
       },
       {
         test: /\.css$/,
-        loaders: ['style-loader',
-          'css-loader',
-          'postcss-loader']
+        loader: ExtractTextPlugin.extract('style-loader',
+          'css-loader!postcss-loader')
       },
       {
         test: /\.scss$/,
-        loaders: ['style-loader',
-          'css-loader',
-          'postcss-loader',
-          'sass-loader']
+        loader: ExtractTextPlugin.extract('style-loader',
+          'css-loader!postcss-loader!sass-loader')
       },
       {
         test: /\.png$/,
@@ -88,6 +86,7 @@ module.exports = Object.keys(languages).map(locale => ({
       minChunks: Infinity,
       filename: path.join(locale,'[name].[chunkhash:8].js')
     }),
+    new ExtractTextPlugin(path.join(locale, '[name].[chunkhash:8].css')),
     function() {
       this.plugin("done", function(stats) {
         mkdirp(mapPath);

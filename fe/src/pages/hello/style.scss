@@ -1,0 +1,8 @@
+.nav-title {
+  text-align: center;
+  transition: transform 0.5s;
+}
+.nav-title:hover {
+  transform: rotate(360deg);
+  transition: transform 0.5s;
+}

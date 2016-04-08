@@ -1,11 +1,17 @@
 {{!< default }}
 
-<h1>
+{{#contentFor "page-css"}}
+    {{{css "pages/hello"}}}
+    {{{css "components/first"}}}
+{{/contentFor}}
+
+{{{js "pages/hello" }}}
+
+<h1 class="nav-title">
     Hello, {{name}}!
 </h1>
 
-<div id="root">
+<div id="firstComponent">
 
 </div>
 
-{{{js "pages/hello" }}}

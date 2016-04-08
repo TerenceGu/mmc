@@ -51,5 +51,5 @@ render(
   <Provider store={window.reduxState}>
     <Component />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('firstComponent')
 );
