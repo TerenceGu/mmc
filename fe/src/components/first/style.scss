@@ -1,10 +1,11 @@
 @import '../../common/style/color.scss';
+@import '../../common/style/font.scss';
 
 :local(.hello) {
   background-image: url(www/prompt.png);
   background-size: cover;
   color: $green;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $enCommon;
   height: 400px;
   &:local(.hello-ru) {
     background-image: url(ru/prompt.png);

@@ -3,12 +3,12 @@
  */
 import { createStore, combineReducers } from 'redux';
 
-import firstReducers from '../../components/first';
+import todo_listReducers from '../../components/todo_list';
 
 import styles from './style.scss';
 
 const reducer = combineReducers(Object.assign(
-  firstReducers
+  todo_listReducers
 ));
 
 window.reduxState = createStore(reducer);

@@ -51,8 +51,12 @@ module.exports = Object.keys(languages).map(locale => ({
           'css-loader!postcss-loader!sass-loader')
       },
       {
-        test: /\.png$/,
+        test: /\.(png|jpg|jpeg|gif)$/,
         loader: 'file-loader?name=image/[name].[hash:8].[ext]'
+      },
+      {
+        test: /\.(eot|ttf|woff|svg)(.+)?$/,
+        loader: 'file-loader?name=fonts/[name].[hash:8].[ext]'
       }
     ]
   },
