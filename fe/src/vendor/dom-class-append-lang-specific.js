@@ -10,7 +10,7 @@ const $locale = process.env.LOCALE || 'us';
 export default function (className, style) {
   const rawClassNames = [className, `${className}-${$locale}`];
   if (style) {
-    return classNames(...mapArray(rawClassNames, x => style[x]||''));
+    return classNames(...mapArray(rawClassNames, name => style[name] || ''));
   }
   return classNames(...rawClassNames);
 }

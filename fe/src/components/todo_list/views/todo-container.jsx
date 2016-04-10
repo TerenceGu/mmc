@@ -2,7 +2,7 @@
  * Created by fed on 16/4/8.
  */
 import React, { PropTypes } from 'react';
-import { connect }  from 'react-redux';
+import { connect } from 'react-redux';
 
 import styles from './todo-container.scss';
 
@@ -11,28 +11,23 @@ import TodoList from './todo-list.jsx';
 
 import { setNewItemVisibility } from '../actions';
 
-class TodoContainer extends React.Component {
-  constructor(props) {
-    super(props);
+const TodoContainer = ({ dispatch }) => {
+  function addTaskClick() {
+    dispatch(setNewItemVisibility(true));
   }
-  addTaskClick() {
-    this.props.dispatch(setNewItemVisibility(true));
-  }
-  render() {
-    return (
-      <article>
-        <h1>TodoList</h1>
-        <TodoList />
-        <AddItem />
-        <button className={styles.addTask} onClick={this.addTaskClick.bind(this)}>
-          {__("Add Task")}
-       </button>
-      </article>
-    )
-  }
-}
+  return (
+    <article>
+      <h1>TodoList</h1>
+      <TodoList />
+      <AddItem />
+      <button className={styles.addTask} onClick={addTaskClick}>
+        {__('Add Task')}
+      </button>
+    </article>
+  );
+};
 
-TodoContainer.props = {
+TodoContainer.propTypes = {
   dispatch: PropTypes.func.isRequired
 };
 

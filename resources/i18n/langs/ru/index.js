@@ -3,5 +3,5 @@
  */
 module.exports = {
   'Add Task': 'Дополнительные мандаты',
-  'Cancel': 'отменен'
-}
+  Cancel: 'отменен'
+};

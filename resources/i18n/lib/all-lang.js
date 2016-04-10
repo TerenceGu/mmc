@@ -13,7 +13,7 @@ const baseDir = path.join(__dirname, '..', 'langs');
 
 
 function loadLanguage(language) {
-  return  require(path.join(baseDir, language));
+  return require(path.join(baseDir, language));
 }
 
 function simpleCopy(obj) {
@@ -28,7 +28,7 @@ const allLanguages = {
 };
 
 
-smallLanguages.forEach( key => {
+smallLanguages.forEach(key => {
   allLanguages[key] = Object.assign(simpleCopy(commonLang), loadLanguage(key));
 });
 

@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "comma-dangle": [0, "never"]
+  },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "__": true                                 // webpack i18n
+  }
+}

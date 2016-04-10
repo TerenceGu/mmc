@@ -9,35 +9,30 @@ import { removeTodoItem } from '../actions';
 
 import styles from './todo-list.scss';
 
-class TodoList extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  removeItem(index) {
-    this.props.dispatch(removeTodoItem(index));
-  }
-  render() {
-    return (
-      <ul className={styles.todoItemContainer}>
-        {this.props.todoItems.map((content, index) => (
-          <li className={styles.todoItem}
-            key={index} onClick={() => this.removeItem(index)} >
-            {content}
-          </li>
-        ))}
-      </ul>
-    )
-  }
-}
+const TodoList = ({ dispatch, todoItems }) => {
+  const removeItem = index => () => dispatch(removeTodoItem(index));
+  return (
+    <ul className={styles.todoItemContainer}>
+      {todoItems.map((content, index) => (
+        <li className={styles.todoItem}
+          key={index} onClick={removeItem(index)}
+        >
+          {content}
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 TodoList.propTypes = {
-  todoItems: React.PropTypes.arrayOf(React.PropTypes.string)
+  todoItems: React.PropTypes.arrayOf(React.PropTypes.string),
+  dispatch: React.PropTypes.func.isRequired
 };
 
-const mapStateToProps = ({todo_list}, ownProp) => {
-  return {
+const mapStateToProps = ({ todo_list }) => (
+  {
     todoItems: todo_list.todoList
   }
-};
+);
 
 export default connect(mapStateToProps)(TodoList);

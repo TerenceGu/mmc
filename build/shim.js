@@ -7,14 +7,15 @@ const path = require('path');
 const fs = require('fs');
 const mkdirp = require('mkdirp');
 const CleanCSS = require('clean-css');
+const UglifyJS = require("uglify-js");
 
 const outdir = path.join(outdirBase, 'shim');
 
 mkdirp.sync(outdir);
 
 function ie8Shim() {
-  fs.writeFileSync(path.join(outdir, 'ie8-shim.min.js'),
-    fs.readFileSync(path.join(__dirname, 'extra', 'ie8-shim.js')));
+  const code = UglifyJS.minify(path.join(__dirname, 'extra', 'ie8-shim.js')).code;
+  fs.writeFileSync(path.join(outdir, 'ie8-shim.min.js'), code);
 }
 
 function concatShimFromNodeModules(outputName, moduleName, fileList, fn) {
@@ -38,8 +39,16 @@ function normalizeShim() {
   );
 }
 
+function es6Shim() {
+  const base = path.join(__dirname, 'extra', 'es6-shim')
+  const fileList = fs.readdirSync(base)
+    .map(filename => path.join(base, filename));
+  const result = UglifyJS.minify(fileList).code;
+  fs.writeFileSync(path.join(outdir, 'es6-shim.min.js'), result);
+}
+
 ie8Shim();
 es5Shim();
 normalizeShim();
-
+es6Shim();
 

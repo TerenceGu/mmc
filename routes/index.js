@@ -5,12 +5,12 @@ const exportController = require('lt-util').exportController;
 
 const router = exportController(__dirname);
 
-router.get('/www', function*() {
+router.get('/www', function* () {
   this.state.lang = 'www';
-  this.render('hello',{
+  this.render('hello', {
     name: 'www user',
     title: 'hello, world!'
-  },{
+  }, {
     todo_list: new Promise(resolve => {
       resolve({
         todoList: [
@@ -24,10 +24,10 @@ router.get('/www', function*() {
 
 router.get('/ru', function*() {
   this.state.lang = 'ru';
-  this.render('hello',{
+  this.render('hello', {
     name: 'ru user',
     title: 'hello, world!'
-  },{
+  }, {
     todo_list: new Promise(resolve => {
       resolve({
         todoList: [
