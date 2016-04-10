@@ -12,7 +12,7 @@ function getTargetList(targetClassify) {
   const targetList = {};
   const fileName = targetClassify === 'pages' ? 'entry.jsx' : 'component.jsx';
   fileList.forEach(name => {
-    targetList[`${targetClassify}/${name}`] = `./${targetClassify}/${name}/${fileName}`
+    targetList[`${targetClassify}/${name}`] = `./${targetClassify}/${name}/${fileName}`;
   });
   return targetList;
 }
@@ -21,4 +21,3 @@ module.exports = {
   components: getTargetList('components'),
   pages: getTargetList('pages')
 };
-

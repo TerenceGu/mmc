@@ -3,7 +3,8 @@
   "rules": {
     "comma-dangle": [0, "never"],
     "func-names": [0],
-    "strict": [0]
+    "strict": [0],
+    "no-console": [0]
   },
   "env": {
     "node": true
