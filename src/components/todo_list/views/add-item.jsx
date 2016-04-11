@@ -26,7 +26,7 @@ const AddItem = ({ dispatch, hint, addItemVisible }) => {
       <input className={styles.input} type="text"
         placeholder={hint} ref={node => { input = node; }}
       />
-      <button className={classnames(styles.button, styles.add)}onClick={addATodoItem}>
+      <button className={classnames(styles.button, styles.add)} onClick={addATodoItem}>
         {__('Add Task')}
       </button>
       <button className={styles.button} onClick={cancelAdd}>

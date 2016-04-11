@@ -40,3 +40,4 @@ router.get('/ru', function*() {
 });
 
 module.exports = router;
+

@@ -24,7 +24,7 @@ const publicPath = config.publicPath;
 module.exports = Object.keys(languages).map(locale => ({
   context: source,
   entry: Object.assign({
-    react: ['react', 'react-dom', 'redux', 'react-redux']
+    react: ['react', 'react-dom', 'redux', 'react-redux', 'classnames']
   },
     pages,
     components),
@@ -84,7 +84,7 @@ module.exports = Object.keys(languages).map(locale => ({
     }()),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.CommonsChunkPlugin({
-      names: Object.keys(components).concat(['react', 'manifest']),
+      names: ['react', 'manifest'],
       minChunks: Infinity,
       filename: path.join(locale, '[name].[chunkhash:8].js')
     }),

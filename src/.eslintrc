@@ -1,7 +1,7 @@
 {
   "extends": "airbnb",
   "rules": {
-    "comma-dangle": [0, "never"]
+    "comma-dangle": [2, "never"]
   },
   "env": {
     "browser": true
