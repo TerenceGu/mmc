@@ -41,4 +41,6 @@
 
 创建组件请cd到`src/components`目录下, 使用命令**yo lt-co {componentName}**创建
 
+请注意先全局安装yeoman(`npm i -g yo`)
+
 组件的调试可以使用hot-loader, cd到组件test下运行`node server.js`即可

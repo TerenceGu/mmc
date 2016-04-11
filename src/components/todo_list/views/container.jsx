@@ -21,7 +21,7 @@ const TodoContainer = ({ dispatch }) => {
       <TodoList />
       <AddItem />
       <button className={styles.addTask} onClick={addTaskClick}>
-        {__('Add Task')}
+        {__('Add Task, saas')}
       </button>
     </article>
   );
