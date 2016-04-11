@@ -1,64 +1,41 @@
-## 工程可能的目录结构
+## 工程说明
 
-使用koa作web框架, 使用eslint + airbnb/javascript处理代码风格, mocha 单元测试框架,
-chai做断言库
-
-模板引擎采用handlebars
-
-前端采用react+redux
-
-由于react实现bigPipe相对方便, 因此也默认实现了bigpipe
-
-首先要安装nodejs
-
-测试运行: (windows尚未测试)
+#### 运行:
 ````
 1. 安装nodejs，注意版本要高于4
-2. git clone https://github.com/yujigali/sample.git 
+2. git clone https://github.com/lt-fed/react-redux-bigpipe.git
 3. cd sample && npm install
-4. npm start
+4. npm start (windows请运行 npm start-dev)
 ````
 然后浏览器访问`http://localhost:4000/www`
 
+#### 技术选型
+
+| 类别 | 框架/库 | 说明 |
+|:--------------:|:----------------------:|:---------------------------:|
+| node层后端 | koa | 优雅健壮 |
+| 模板引擎 | handlebars | helper实现简单轻松，缩写hbs |
+| node层测试框架 | mocha + chai | 业界标配 |
+| 前端视图框架 | react | 强制组件化，大红大紫 |
+| 前端数据层框架 | redux | 与react配合很合适 |
+| 渲染方式 | hbs直出 ＋ 组件bigPipe | 兼顾性能和扩展性 |
+
+#### 目录结构
+
 [工程目录结构大致说明](doc/structure.md)
 
+#### 可选环境变量
 
-可以施加影响的环境变量:
-`PORT`: 影响监听的端口
-`HOST`: 影响监听的网卡ip，默认是0.0.0.0
-`STATIC_ADDRESS`: 静态文件的域名，默认是 127.0.0.1 + port,
-`ADDRESS`: 当前服务的域名
+| 环境变量名 | 含义 | 值 | 默认 |
+|:--------------:|:----------------------------:|:-------------:|:--------------:|
+| PORT | 要监听的端口 |  | 400 |
+| HOST | 监听的网卡ip |  | 0.0.0.0 |
+| STATIC_ADDRESS | 静态文件服务器的地址 | 注意末尾要加/ | host:port/ |
+| ADDRESS | 当前服务的域名, 用于链接地址 |  | localhost:4000 |
 
+#### 开发时的约定(规范)
 
-工程约定(前端part):
+**主要原则在于约定大于配置**
 
-1. 组件, 也就是components下的一个子文件夹, 是最小复用单位, 并且约定
-, 每个组件必须要有两个文件, 分别是`index.js`和`component.jsx`.
-其中`component.jsx`必须自己解决在页面中的挂载问题(也就是要自己调用render),
-并且如果想要拥有共享状态的话, 必须使用挂载在全局上redux的store; 而`index.js`
-必须导出reducers, 供pages中的js组合reducer, 如果没有则导出一个空对象.
-另外,
- component之间不能有依赖, 只能依赖common或者node——modules中的东西.
+[前端部份的约定](doc/fe.md)
 
-2. 页面, 也就是`pages`下的一个文件夹, 必须有一个`entry.jsx`, 主要是用于
-引入需要的reducer, 之后创建一个store挂载到全局`window`上. page的布局文件可以就近书写.
-
-3. 在增加一个页面时, 分为两部分. 第一部分是用于定位的模板文件(用于存放首屏以及header需要
-的东西); 第二部分是各个组件, 组件一般都需要一个初始化数据, 约定其actionType为`{NAME}_INIT`.
-最终写的渲染代码可能如下:
-````
-this.render('hello'//模板的名字 ,
- {
-    name: 'ii'
-  },//模板中的local变量,当然模板会隐式包含this.state的变量
-  {
-    first://组件的名字 new Promise(resolve=>{
-      setTimeout(() => {
-        resolve({
-          text: 123
-        });
-      }, 0);
-    })//该组件初始化需要的数据(强制需要promise)
-  }//组件列表
-  );
-````
