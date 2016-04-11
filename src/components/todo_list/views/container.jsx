@@ -4,7 +4,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import styles from './todo-container.scss';
+import styles from './container.scss';
 
 import AddItem from './add-item.jsx';
 import TodoList from './todo-list.jsx';
