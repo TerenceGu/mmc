@@ -15,7 +15,7 @@ const app = koa();
 
 app.use(logger());
 
-app.use(favicon(path.join(__dirname, 'fe', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'resources', 'favicon.ico')));
 
 app.use(function *(next) {
   yield next;
@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === 'production') {
     minifyJS: true
   }));
 } else {
-  app.use(require('koa-static')(path.join(__dirname, 'fe', 'dist')));
+  app.use(require('koa-static')(path.join(__dirname, 'public')));
 }
 
 app.use(bigPipe);
