@@ -26,7 +26,7 @@ module.exports = {
     disableCache: process.env.NODE_ENV !== 'production',
     templateOptions: {},
     locals: {
-      lang: 'www'
+      
     }
   }
 };

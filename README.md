@@ -18,70 +18,10 @@ chai做断言库
 3. cd sample && npm install
 4. npm start
 ````
-然后浏览器访问`http://localhost:4000/user/123`
+然后浏览器访问`http://localhost:4000/www`
 
-工程目录结构大致说明
-````
-project
-|---bin  存放可执行文件
-|   |
-|---|---www  shebang, 服务器的启动文件
-|
-|---fe 前端目录
-|   |
-|---|---dist 构建后的输出目录
-|   |   |
-|---|---|---image 图片
-|   |   |
-|---|---|---shim 各种js和css的shim
-|   |   |
-|---|---|---www(或者其他小语种) 组件以及页面代码
-|   |   |   |
-|---|---|---|---components 组件(视图以及连接全局变量)
-|   |   |   |
-|---|---|---|---pages 页面(数据部分),创建store
-|   |   |   |
-|---|---|---|---react.js,manifest.js...(特殊的chunk文件)
-|   |
-|---|---src 构建前的源文件
-|   |   |
-|---|---|---common 公共组件,可以被各个components引用
-|   |   | 
-|---|---|---components react组件以及其reducers
-|   |   |
-|---|---|---pages 组合reducers的逻辑
-|   |   |
-|---|---|---vendor 额外文件,后期会用npm模块替代
-|
-|---lib 一些封装的库，过大的话可能会独立成npm模块
-|   |
-|---|---render koa的render中间件
-|
-|---resources 语言包和最终生成的map.json,前后端公用!
-|
-|---routes 路由模块
-|
-|---services 后端的api封装
-|
-|---test 单元测试的文件
-|
-|---views 用于存放模板文件
-|
-|---.babelrc
-|
-|---.eslintrc eslint配置文件
-|
-|---.gitignore
-|
-|---app.js 入口文件
-|
-|---config.js 配置文件, 大致就是把环境变量读出来
-|
-|---package.json
-|
-|---README.md
+[工程目录结构大致说明](doc/structure.md)
 
-````
 
 可以施加影响的环境变量:
 `PORT`: 影响监听的端口
