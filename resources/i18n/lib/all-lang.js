@@ -20,11 +20,11 @@ function simpleCopy(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
 
-const smallLanguages = fs.readdirSync(baseDir).filter(x => x !== 'www');
-const commonLang = loadLanguage('www');
+const smallLanguages = fs.readdirSync(baseDir).filter(x => x !== 'en');
+const commonLang = loadLanguage('en');
 
 const allLanguages = {
-  www: commonLang
+  en: commonLang
 };
 
 

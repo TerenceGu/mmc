@@ -6,7 +6,7 @@ const exportController = require('lt-util').exportController;
 const router = exportController(__dirname);
 
 router.get('/www', function* () {
-  this.state.lang = 'www';
+  this.state.lang = 'en';
   this.render('hello', {
     name: 'www user',
     title: 'hello, world!'

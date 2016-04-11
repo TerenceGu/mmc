@@ -45,6 +45,7 @@ app.use(function *(next) {
 app.use(router.routes());
 
 app.use(function *() {
+  this.state.lang = 'en';
   this.status = 404;
   this.render('404', {
     title: '404',
