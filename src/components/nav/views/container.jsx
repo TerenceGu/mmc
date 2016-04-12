@@ -10,7 +10,7 @@ import styles from './container.scss';
 const Container = ({ dispatch }) => {
   return (
     <div>
-      
+      hello
     </div>
   );
 };
