@@ -5,39 +5,19 @@ const exportController = require('lt-util').exportController;
 
 const router = exportController(__dirname);
 
-router.get('/www', function* () {
+router.get('/', function* () {
   this.state.lang = 'en';
-  this.render('hello', {
-    name: 'www user',
-    title: 'hello, world!'
+  this.render('index', {
+    
   }, {
-    todo_list: new Promise(resolve => {
-      resolve({
-        todoList: [
-          'Drink a cup of coffee',
-          'Call wife'
-        ]
-      });
-    })
+    top_banner: Promise.resolve(true),
+    nav: Promise.resolve(true),
+    index_banner: Promise.resolve(true),
+    trending: Promise.resolve(true),
+    best_seller: Promise.resolve(true)
   });
 });
 
-router.get('/ru', function*() {
-  this.state.lang = 'ru';
-  this.render('hello', {
-    name: 'ru user',
-    title: 'hello, world!'
-  }, {
-    todo_list: new Promise(resolve => {
-      resolve({
-        todoList: [
-          'Drink a cup of coffee',
-          'Call wife'
-        ]
-      });
-    })
-  });
-});
 
 module.exports = router;
 
