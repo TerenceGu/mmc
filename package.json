@@ -34,7 +34,7 @@
     "eslint-plugin-react": "^4.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
-    "generator-lt-co": "^1.0.9",
+    "generator-lt-co": "latest",
     "i18n-webpack-plugin": "^0.2.7",
     "koa-static": "^2.0.0",
     "mocha": "^2.4.5",
