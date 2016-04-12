@@ -1,0 +1,122 @@
+@import "../../common/style/color";
+@import url("../../common/style/font-face.css");
+
+#top_bannerComponent {
+  height: 40px;
+  background-color: $black;
+}
+
+#navComponent {
+  height: 135px;
+  border-bottom: 1px solid $borderGray;
+}
+
+.mainContent {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#index_bannerComponent {
+  height: 588px;
+  margin: 8px 0;
+}
+
+
+.areaTitle {
+  font-size: 21px;
+  line-height: 35px;
+  text-align: center;
+  color: #000;
+  background-image: url(icn-background-gray.png);
+  background-repeat: repeat-x;
+  background-position: center;
+  >span{
+    background-color: #fff;
+    padding: 0;
+  }
+}
+
+#trendingComponent {
+  height: 716px;
+  margin: 8px 0;
+}
+
+#best_sellerComponent {
+  height: 350px;
+  margin: 8px 0;
+}
+
+.seoCategory {
+  color: $middleGray;
+  margin: 10px 0;
+  >h2 {
+    line-height: 16px;
+    font-size: 16px;
+  }
+  >p {
+    line-height: 18px;
+    font-size: 12px;
+  }
+}
+
+.mainFooter {
+  height: 192px;
+  margin: 30px 0 0 0;
+  padding: 44px;
+  background-color: $black;
+  color: #fff;
+}
+
+.copyright {
+  margin-top: 14px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+
+.bottomNav {
+  width: 925px;
+  height: 176px;
+  margin: 0 auto;
+  padding-left: 35px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+  >section {
+    width: 180px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    line-height: 23px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .followUs {
+    width: 310px;
+  }
+  .socialList {
+    li {
+      display: inline;
+      margin-right: 3px;
+    }
+  }
+  .socialIcon {
+    margin-bottom: 15px;
+    font-family: icomoon;
+    font-size: 21px;
+    line-height: 21px;
+  }
+}
+
+

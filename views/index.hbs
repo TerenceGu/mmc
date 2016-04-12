@@ -12,55 +12,82 @@
 
 </div>
 
-<div class="xxxx">
-    #TRENDING
+<div class="mainContent">
+    <h3 class="areaTitle">
+        <span>#TRENDING</span>
+    </h3>
+
+    <div id="trendingComponent">
+
+    </div>
+
+    <h3 class="areaTitle">
+        <span>#BEST SELLER</span>
+    </h3>
+
+    <div id="best_sellerComponent">
+
+    </div>
+    <section class="seoCategory">
+        <h2>
+            Affordable Women's Clothes
+        </h2>
+        <p>
+            Welcome to MakeMeChic:A Large Online Portal of Affordable Women’s Clothes, Shoes, Boots, and Accessories.
+            A brand new, stylish wardrobe is at your fingertips.
+            MakeMeChic presents all things unique, trendy and of course, fashionable.
+            Here at MakeMeChic, fashion is our prerogative. After a long stressful day,
+            what better way to unwind than by giving yourself a little treat? After all,
+            you can never go wrong with a new pair of shoes!
+
+        </p>
+        <p>
+            Our ever-growing collection of cheap women’s shoes online will amaze you due to our wide range of styles as well as low prices that just cannot be beat!
+            Our mission is to provide the most up-to-date styles at affordable prices so you can look stunning without damaging your bank account.
+            Whether you are looking for something dressy or casual, we have what you’re looking for!
+            You don’t have to spend a whopping sum of money to have an abundance of ankle boots,
+            women’s shoes, and fashionable women’s clothing from our web store!
+            We add new items everyday to satisfy your inner shopaholic. We also offer tons of discounts for our VIP members as well as our new customers.
+            To add a cherry on top of all this goodness, we have tons of sales where we slash prices even further,
+            so make sure you check back often.
+        </p>
+    </section>
 </div>
 
-<div id="trendingComponent">
+<footer class="mainFooter">
+    <div class="bottomNav">
+        {{#list footerLinks}}
+            <section>
+                <h2>
+                    {{title}}
+                </h2>
+                {{#list links}}
+                    <li>
+                        <a href="{{link}}" rel="nofollow" title="{{name}}">{{name}}</a>
+                    </li>
 
-</div>
-
-<div class="xxxx">
-    #BESTSELLER
-</div>
-
-<div id="best_sellerComponent">
-
-</div>
-
-<section>
-    <h2>
-
-    </h2>
-    <p>
-
-    </p>
-    <p>
-
-    </p>
-</section>
-
-<footer>
-    <div>
-        <section>
+                {{/list}}
+            </section>
+        {{/list}}
+        <section class="followUs">
             <h2>
-
+                find us on
             </h2>
-            <ul>
-                <li>
-                    <a href=""></a>
-                </li>
+            <ul class="socialList">
+                {{#list socialList}}
+                    <li>
+                        <a class="socialIcon" rel="nofollow" href="{{link}}" title="{{name}}" target="_blank">
+                            {{{code}}}
+                        </a>
+                    </li>
+                {{/list}}
             </ul>
-        </section>
-        <section></section>
-        <section></section>
-        <section>
-            <h2>
-
-            </h2>
+            <div id="subscribeComponent">
+                <h2> SIGN UP FOR SPECIAL ROMOTIONS </h2>
+            </div>
         </section>
     </div>
-    <div>
-
+    <div class="copyright">
+        &copy;MakeMeChic.com. All rights reserved
     </div>
 </footer>
