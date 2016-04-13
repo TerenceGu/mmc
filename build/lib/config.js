@@ -9,5 +9,5 @@ module.exports = {
   source: path.join(base, 'src'),
   out: path.join(base, 'public'),
   map: path.join(__dirname, '..', '..', 'resources', 'map'),
-  publicPath: uri.protocol + uri.baseUri
+  publicPath: '/'
 };
