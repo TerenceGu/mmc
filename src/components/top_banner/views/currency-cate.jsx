@@ -8,8 +8,12 @@ import styles from './currency-cate.scss';
 
 const CurrencyCate = ({ dispatch, currency }) => {
   return (
-      <a rel="nofollow" className={styles.currencyCate} href="javascript:void(0);
-      " onClick="" title="US$" atr1="USD">US$</a>
+      <div className={styles.currencyCateContainer}>
+        <a rel="nofollow" className={styles.currencySelect} title="US$" atr1="USD">US$</a>
+        <div className={styles.currencyCate}>
+
+        </div>
+      </div>
     );
 };
 

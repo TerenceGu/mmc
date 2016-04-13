@@ -1,6 +1,25 @@
-:local(.currencyCate){
-  color:#fff;
-  text-decoration: none;
+:local(.currencyCateContainer){
+  position:relative;
   float:left;
 }
 
+:local(.currencySelect){
+  color:#fff;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+:local(.currencySelect:after){
+  content:"";
+  background: url(http://statics.makemechic.com/image/image_icon_vc151b71.png) no-repeat scroll -190px -2px transparent;
+  display: inline-block;
+  height: 4px;
+  width: 7px;
+  position: absolute;
+  top: 20px;
+  right: -15px;
+}
+
+:local(.currencyCate) {
+
+}
