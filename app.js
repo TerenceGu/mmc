@@ -18,6 +18,113 @@ app.use(logger());
 app.use(favicon(path.join(__dirname, 'resources', 'favicon.ico')));
 
 app.use(function *(next) {
+  this.state.footerLinks = [
+    {
+      title: 'customer care',
+      links: [
+        {
+          link: '',
+          name: 'faq'
+        },
+        {
+          link: '',
+          name: 'contact us'
+        },
+        {
+          link: '',
+          name: 'shipping'
+        },
+        {
+          link: '',
+          name: 'return & exchanges'
+        },
+        {
+          link: '',
+          name: 'size guide'
+        },
+        {
+          link: '',
+          name: 'payment methods'
+        }
+      ]
+    },
+    {
+      title: 'membership',
+      links: [
+        {
+          link: '',
+          name: 'account login'
+        },
+        {
+          link: '',
+          name: 'track my order'
+        },
+        {
+          link: '',
+          name: 'manage tickets'
+        },
+        {
+          link: '',
+          name: 'shopping bag'
+        },
+        
+      ]
+    },
+    {
+      title: 'company',
+      links: [
+        {
+          link: '',
+          name: 'about us'
+        },
+        {
+          link: '',
+          name: 'terms & conditions'
+        },
+        {
+          link: '',
+          name: 'privacy policy'
+        }
+      ]
+    }
+  ];
+  this.state.socialList = [
+    {
+      link: '',
+      name: 'facebook',
+      code: '&#xe906'
+    },
+    {
+      link: '',
+      name: 'twitter',
+      code: '&#xe908'
+    },
+    {
+      link: '',
+      name: 'google',
+      code: '&#xe905'
+    },
+    {
+      link: '',
+      name: 'youtube',
+      code: '&#xe909'
+    },
+    {
+      link: '',
+      name: 'pinterest',
+      code: '&#xe90b'
+    },
+    {
+      link: '',
+      name: 'instagram',
+      code: '&#xe907'
+    },
+    {
+      link: '',
+      name: 'tumblr',
+      code: '&#xe90a'
+    }
+  ];
   yield next;
   this.set('Access-Control-Allow-Origin', '*');
 });
@@ -47,10 +154,7 @@ app.use(router.routes());
 app.use(function *() {
   this.state.lang = 'en';
   this.status = 404;
-  this.render('404', {
-    title: '404',
-    nofollow: true
-  });
+  this.body = '404';
 });
 
 module.exports = app;
