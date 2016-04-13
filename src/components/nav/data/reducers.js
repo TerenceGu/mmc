@@ -2,7 +2,7 @@
  * Created by fed on 16/4/8.
  */
 const defaultState = {
-  
+  showUpper:true
 };
 
 export default (state = defaultState, action) => {
