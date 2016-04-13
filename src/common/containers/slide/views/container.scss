@@ -1,0 +1,23 @@
+@import "../../../style/font-face.css";
+@import "../../../style/color";
+
+:local(.btn) {
+  font-family: icomoon !important;
+  width: 46px;
+  height: 109px;
+  line-height: 109px;
+  font-size: 36px;
+  color: #fff;
+  outline: none;
+  border: 0;
+  background-color: $borderGray;
+  &:hover {
+    background-color: $middleGray;
+  }
+  &:local(.prevPage) {
+
+  }
+  &:local(.nextPage) {
+
+  }
+}
