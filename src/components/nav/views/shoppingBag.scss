@@ -14,12 +14,14 @@
 }
 :local(.myBag){
   display:inline-block;
+  padding: 0;
   vertical-align: bottom;
     a{
       font-size: 12px;
       display:block;
       height:14px;
-      padding:26px 6px 2px 6px;
+      margin: 0;
+      padding:28px 6px 2px 6px;
       line-height:14px;
       text-align:center;
       position:relative;

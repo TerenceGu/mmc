@@ -3,7 +3,7 @@
  */
 export const setLowerFix = flag => (
 {
-    type: 'SET_LOWER_FIX',
+    type: 'NAV_SET_LOWER_FIX',
     flag
 }
 );
