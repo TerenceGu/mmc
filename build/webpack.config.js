@@ -55,7 +55,7 @@ module.exports = Object.keys(languages).map(locale => ({
         loader: 'file-loader?name=image/[name].[hash:8].[ext]'
       },
       {
-        test: /\.(eot|ttf|woff|svg)(.+)?$/,
+        test: /\.(eot|ttf|woff|svg|otf)(.+)?$/,
         loader: 'file-loader?name=fonts/[name].[hash:8].[ext]'
       }
     ]

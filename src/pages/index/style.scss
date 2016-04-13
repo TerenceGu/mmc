@@ -8,7 +8,6 @@
 
 #navComponent {
   height: 135px;
-  border-bottom: 1px solid $borderGray;
 }
 
 .mainContent {
@@ -31,6 +30,7 @@
   background-repeat: repeat-x;
   background-position: center;
   >span{
+    font-family: "Proxima Nova bold";
     background-color: #fff;
     padding: 0;
   }
@@ -52,10 +52,12 @@
   >h2 {
     line-height: 16px;
     font-size: 16px;
+    font-family: "Proxima Nova bold";
   }
   >p {
     line-height: 18px;
     font-size: 12px;
+    font-family: "Proxima Nova";
   }
 }
 
@@ -64,6 +66,7 @@
   margin: 30px 0 0 0;
   padding: 44px;
   background-color: $black;
+  font-family: "Proxima Nova";
   color: #fff;
 }
 
@@ -96,6 +99,7 @@
     line-height: 23px;
   }
   h2 {
+    font-family: "Proxima Nova bold";
     font-size: 14px;
   }
   a {
