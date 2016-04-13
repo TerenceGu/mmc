@@ -2,10 +2,10 @@
   带有url的common css必须是css文件, 不能是sass, 因为sass的import会自动先并入最终的文件,
   到时候的相对路径就是完全错误的
 */
-@font-face{
+@font-face {
   font-family: 'icomoon';
-  src:    url('fonts/icomoon.eot?kvhu6k');
-  src:    url('fonts/icomoon.eot?kvhu6k#iefix') format('embedded-opentype'),
+  src: url('fonts/icomoon.eot?kvhu6k');
+  src: url('fonts/icomoon.eot?kvhu6k#iefix') format('embedded-opentype'),
   url('fonts/icomoon.ttf?kvhu6k') format('truetype'),
   url('fonts/icomoon.woff?kvhu6k') format('woff'),
   url('fonts/icomoon.svg?kvhu6k#icomoon') format('svg');
@@ -13,3 +13,34 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('fonts/proxima-nova.eot');
+  src: url('fonts/proxima-nova.eot?kvhu6k#iefix') format('embedded-opentype'),
+  url('fonts/proxima-nova.ttf?kvhu6k') format('truetype'),
+  url('fonts/proxima-nova.otf') format('opentype'),
+  url('fonts/proxima-nova.woff?kvhu6k') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova bold';
+  src:    url('fonts/proxima-nova-bold.eot');
+  src:    url('fonts/proxima-nova-bold.eot?kvhu6k#iefix') format('embedded-opentype'),
+  url('fonts/proxima-nova-bold.ttf?kvhu6k') format('truetype'),
+  url('fonts/proxima-nova-bold.otf') format('opentype'),
+  url('fonts/proxima-nova-bold.woff?kvhu6k') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova iatalic';
+  src:    url('fonts/proxima-nova-light-italic.eot');
+  src:    url('fonts/proxima-nova-light-italic.eot?kvhu6k#iefix') format('embedded-opentype'),
+  url('fonts/proxima-nova-light-italic.ttf?kvhu6k') format('truetype'),
+  url('fonts/proxima-nova-light-italic.otf') format('opentype'),
+  url('fonts/proxima-nova-light-italic.woff?kvhu6k') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
