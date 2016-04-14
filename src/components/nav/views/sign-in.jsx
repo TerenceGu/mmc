@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import styles from './signIn.scss';
+import styles from './sign-in.scss';
 
 const Container = ({ isLogin }) =>
   <div>

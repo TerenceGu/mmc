@@ -5,8 +5,8 @@ import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
 import SearchBar from './search-bar.jsx';
-import Login from './signIn.jsx';
-import ShoppingBag from './shoppingBag.jsx';
+import Login from './sign-in.jsx';
+import ShoppingBag from './shopping-bag.jsx';
 
 import { setLowerFix } from '../data/actions.js';
 
@@ -66,7 +66,6 @@ const Container = ({ dispatch, lowerFix, categories }) => {
         {lowerFix ? <li><ShoppingBag goodsNum={0} /></li> : null}
       </ul>
       </div>
-      <div style={{ width: '100%', height: '1500px', clear: 'both' }}></div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
-import styles from './shoppingBag.scss';
+import styles from './shopping-bag.scss';
 
 
 const Container = ({ goodsNum, lowerFix }) => (
