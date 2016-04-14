@@ -65,18 +65,24 @@ const Container = ({ dispatch, lowerFix, categories }) => {
                     <div className={ classnames(styles.list, styles.multiUl) }>
                       {
                         Object.keys(categories[value].children).map(ul => (
-                           <ul className={ styles }>
+                           <ul>
                              {
                                Object.keys(categories[value].children[ul]).map(subkey => (
                                  <li>
                                    <h1>
-                                     <a href={categories[value].children[ul][subkey].link}>{subkey}</a>
+                                     <a href={categories[value].children[ul][subkey].link}>
+                                       {subkey}
+                                     </a>
                                    </h1>
                                    {
                                      categories[value].children[ul][subkey].children ?
-                                       Object.keys(categories[value].children[ul][subkey].children).map(subkey2 => (
+                                       Object.keys(categories[value].children[ul][subkey].children)
+                                         .map(subkey2 => (
                                          <li>
-                                           <a href={categories[value].children[ul][subkey].children[subkey2]}>
+                                           <a href={
+                                            categories[value].children[ul][subkey].children[subkey2]
+                                           }
+                                           >
                                              {subkey2}
                                            </a>
                                          </li>

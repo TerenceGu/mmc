@@ -12,6 +12,7 @@
     margin:0;
   }
   h1 {
+    font-family: 'Proxima Nova bold';
     font-size:13px;
     height:25px;
     line-height:25px;
@@ -41,7 +42,6 @@
   }
 }
 :local(.lowerHeader){
-  clear:both;
   text-align:center;
   border-bottom:1px solid #DEDEDE;
   li{
