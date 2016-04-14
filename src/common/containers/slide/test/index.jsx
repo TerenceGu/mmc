@@ -1,21 +1,21 @@
 /**
  * Created by fed on 16/4/11.
  */
-import {createStore, combineReducers} from 'redux';
-import reducer from '../index.js';
 import React from 'react';
-import {render} from 'react-dom';
-import {Provider} from 'react-redux';
+import { render } from 'react-dom';
 
-import TodoComponent from '../views/container.jsx';
+import Component from '../index.jsx';
 
+const props = {
+  width: 960,
+  height: 555
+};
 
-const store = createStore(combineReducers(
-  reducer
-));
+const list = ['http://img.makemechic.com/images/makemechic.com/1460426412651850371.jpg',
+  'http://img.makemechic.com/images/makemechic.com/1460426206764472139.jpg'
+];
 
-render(
-  <Provider store={store}>
-    <TodoComponent />
-  </Provider>
+render(<Component {...props}>
+  {list.map(name => <img width={props.width} src={name} />)}
+</Component>
   , document.getElementById('root'));

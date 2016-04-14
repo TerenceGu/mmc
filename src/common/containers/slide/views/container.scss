@@ -2,6 +2,7 @@
 @import "../../../style/color";
 
 :local(.btn) {
+  position: absolute;
   font-family: icomoon !important;
   width: 46px;
   height: 109px;
@@ -15,9 +16,31 @@
     background-color: $middleGray;
   }
   &:local(.prevPage) {
-
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
   }
   &:local(.nextPage) {
-
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
   }
+}
+
+:local(.box) {
+  overflow: hidden;
+  position: relative;
+}
+
+:local(.hint) {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+:local(.container) {
+  position: relative;
+  transition: left 0.5s linear;
 }
