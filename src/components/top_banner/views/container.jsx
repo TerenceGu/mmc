@@ -11,8 +11,8 @@ const Container = () => (
     <div className={styles.topBannerContainer}>
       <div className={styles.innerContainer}>
         <CurrencyCate />
-        <HeaderInfo />
         <OnlineHelp />
+        <HeaderInfo />
       </div>
     </div>
 );

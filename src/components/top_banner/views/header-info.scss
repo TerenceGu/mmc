@@ -1,9 +1,7 @@
 :local(.headerInfo){
-  display: inline-block;
-  float:left;
+  margin:auto;
+  display:table;
   height:40px;
-  width:500px;
-  margin-left:245px;
   color:#fff;
 }
 
@@ -40,14 +38,14 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 10000;
   opacity: 0.75;
 }
 
 :local(.popwindowContent){
   position: fixed;
   width: 450px;
-  z-index: 1001;
+  z-index: 10001;
   top: 50%;
   left: 50%;
   margin-left: -225px;
@@ -71,7 +69,7 @@
   font-size: 17px;
   font-weight: bold;
   margin-top: 50px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   padding:0;
 }
 
