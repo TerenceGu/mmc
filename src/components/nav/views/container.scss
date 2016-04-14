@@ -15,15 +15,14 @@
 :local(.logoRight){
   width:280px;
   float:right;
-  &>div{
+  >div{
     float:right;
   }
 }
-
 :local(.upperHeaderInner){
   width:960px;
   margin:0 auto;
-  &>a{
+  >a{
     display:inline-block;
     margin-top:10px;
   }
@@ -32,9 +31,9 @@
   float:right;
   margin-top:20px;
   font-size:12px;
-}
-:local(.headerRight)>*{
-  float:right;
+  >*{
+    float:right;
+  }
 }
 :local(.lowerHeader){
   clear:both;
@@ -42,65 +41,71 @@
   border-bottom:1px solid #DEDEDE;
   li{
     display:inline-block;
+    vertical-align:bottom;
     text-align:center;
     height:44px;
     font-size:13px;
     position:relative;
     line-height:44px;
   }
-  &>ul>li>a{
-    display:block;
-    padding:0 30px;
+  >ul{
+    >li{
+      >a{
+        display:block;
+        padding:0 30px;
+      }
+      &:hover{
+        >a{
+          background-color:#FF3399;
+          color:#FFFFFF;
+        }
+      }
+    }
   }
-  &>ul>li:hover>a{
-    background-color:#FF3399;
-    color:#FFFFFF;
-  }
-  ul div.list{
-    display:none;
-    position:absolute;
-    box-shadow:0 0 4px rgba(0,0,0,0.08);
-  }
-  ul ul{
-    float:left;
-    padding:20px;
-  }
-  ul li:hover div.list{
-    display:block;
-  }
-  ul li:hover div.list li{
-    display:block;
-    text-align:left;
-    color:#545454;
-  }
-  ul li:hover div.list a{
-    display:block;
-    width:100%;
-    line-height:25px;
-  }
-  ul li:hover div.list a:hover{
-    color:#FF3399;
-  }
-  ul h1{
-    font-size:13px;
+  ul {
+    :local(.list) {
+      display:none;
+      position:absolute;
+      box-shadow:0 0 4px rgba(0,0,0,0.08);
+    }
+    ul {
+      float:left;
+      padding:20px;
+    }
+    li:hover :local(.list) {
+      display:block;
+      li {
+        display:block;
+        text-align:left;
+        color:#545454;
+      }
+      a {
+        display:block;
+        width:100%;
+        line-height:25px;
+        &:hover {
+          color:#FF3399;
+        }
+      }
+    }
+    h1 {
+      font-size:13px;
+    }
   }
 }
-:local(.upperHeader){
+:local(.upperHeader) {
   background-color:#F9F9F9;
   height:90px;
 }
-
-:local(.justIn){
+:local(.justIn) {
   width:161px;
 }
-
-:local(.fix){
+:local(.fix) {
   position:fixed;
   top:0;
   width:100%;
 }
-:local(.searchBarLi){
+:local(.searchBarLi) {
   width:175px;
   vertical-align:bottom;
-
 }

@@ -6,20 +6,23 @@ import { connect } from 'react-redux';
 
 import styles from './search-bar.scss';
 
+import classnames from 'classnames';
 
-const Container = ({ dispatch,className }) => {
-    return (
-        <div className={styles.searchBar}>
-            <input type="text" className={className} placeholder="Search MakeMeChic" />
-            <input type="button" />
-        </div>
-    );
-};
-
+const Container = ({ lowerFix }) =>
+  <div className={lowerFix ?
+  classnames(styles.searchBar, styles.narrow) : classnames(styles.searchBar)}
+  >
+    <input type="text" placeholder="Search MakeMeChic" />
+    <input type="button" />
+  </div>;
 Container.propTypes = {
-    className:React.PropTypes.number.isRequired
+  lowerFix: PropTypes.bool.isRequired
 };
 
-
-const SearchBar= connect()(Container);
+const mapStateToProps = ({ nav }) => (
+  {
+    lowerFix: nav.lowerFix
+  }
+);
+const SearchBar = connect(mapStateToProps)(Container);
 export default SearchBar;

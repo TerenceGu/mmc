@@ -1,0 +1,47 @@
+@import '../../../common/style/color.scss';
+@import '../../../common/style/font.scss';
+
+:local(.pic) {
+  background: url('https://statics.makemechic.com/image/image_icon_vc151b71.png') no-repeat scroll -230px 0 transparent;
+  display: block;
+  height: 27px;
+  width: 21px;
+  line-height: 32px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+:local(.myBag) {
+  height: 44px;
+  a {
+    font-size: 12px;
+    display: block;
+    height: 44px;
+    padding: 0 15px;
+    line-height: 14px;
+    text-align: center;
+    position: relative;
+  }
+  &:hover {
+    a {
+      border-left-color: #FF3399;
+      background-color: #FF3399;
+    }
+    :local(.pic) {
+      background: url('https://statics.makemechic.com/image/image_icon_vc151b71.png') no-repeat scroll 0 0 transparent;
+      color: #FF3399;
+    }
+    :local(.myBagWord) {
+      transition: color 300ms linear;
+      color: white;
+    }
+  }
+}
+
+:local(.border) {
+  border-left: 1px solid #777777;
+  &:hover {
+    border-left-color: #FF3399;
+  }
+}
