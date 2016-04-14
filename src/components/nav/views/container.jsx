@@ -103,9 +103,6 @@ const Container = ({ dispatch, lowerFix, categories }) => {
         {lowerFix ? <li><ShoppingBag goodsNum={0} /></li> : null}
       </ul>
       </div>
-      <div style={{ width: '100%', height: '1500px', clear: 'both' }}></div>
-      <h1>wer</h1>
-      <h1>eewr</h1>
     </div>
   );
 };
