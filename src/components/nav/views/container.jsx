@@ -20,9 +20,9 @@ const Container = ({ dispatch , lowerFix }) => {
       function scrollListener(event){
           if(lower.getBoundingClientRect().top<=0
               &&upper.getBoundingClientRect().bottom<=0){
-              dispatch(setLowerFix(false));
-          }else if(upper.getBoundingClientRect().bottom>0){
               dispatch(setLowerFix(true));
+          }else if(upper.getBoundingClientRect().bottom>0){
+              dispatch(setLowerFix(false));
           }
       }
       function deBounce(fun,timeout){
@@ -53,7 +53,7 @@ const Container = ({ dispatch , lowerFix }) => {
                 </div>
             </div>
         </div>
-      <div className={!lowerFix?classnames(styles.lowerHeader,styles.fix):classnames(styles.lowerHeader)}>
+      <div className={lowerFix?classnames(styles.lowerHeader,styles.fix):classnames(styles.lowerHeader)}>
         <ul>
           <li>
               <a href="#">JUST IN</a>
@@ -82,7 +82,7 @@ const Container = ({ dispatch , lowerFix }) => {
                       <ul className={styles.justIn}>
                           <li><a href="#"> Dresses</a></li>
                           <li><a href="#">Top</a></li>
-                          <li><a href="#">Hoodies & Sweatshirts</a></li>
+                          <li><a href="#">Hoodieees & Sweatshirts</a></li>
                           <li><a href="#">Sweaters</a></li>
                           <li><a href="#">Outerwear</a></li>
                           <li><a href="#">Kimono</a></li>
@@ -181,8 +181,8 @@ const Container = ({ dispatch , lowerFix }) => {
                   </ul>
               </div>
           </li>
-          {!lowerFix? <li className={styles.searchBarLi}><SearchBar /></li>:null}
-          {!lowerFix? <li><ShoppingBag goodsNum={0} /></li>:null}
+          {lowerFix? <li className={styles.searchBarLi}><SearchBar /></li>:null}
+          {lowerFix? <li><ShoppingBag goodsNum={0} /></li>:null}
         </ul>
       </div>
         <div style={{width:"100%",height:"1500px",clear:"both"}}></div>

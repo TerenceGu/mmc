@@ -2,7 +2,7 @@
  * Created by fed on 16/4/8.
  */
 const defaultState = {
-  lowerFix:true
+  lowerFix:false
 };
 
 export default (state = defaultState, action) => {

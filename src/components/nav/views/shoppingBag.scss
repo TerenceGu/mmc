@@ -2,31 +2,25 @@
 @import '../../../common/style/font.scss';
 :local(.pic){
   background:url('https://statics.makemechic.com/image/image_icon_vc151b71.png')
-  no-repeat scroll -230px 0px transparent;
+  no-repeat scroll -230px 0 transparent;
   display:block;
   height:27px;
   width:21px;
   line-height:32px;
-  position:absolute;
-  top:5px;
-  right:14px;
-  color:white;
+  margin: 0 auto;
+  text-align: center;
+  color:#fff;
 }
 :local(.myBag){
-  display:inline-block;
-  padding: 0;
-  vertical-align: bottom;
+  height: 44px;
     a{
       font-size: 12px;
       display:block;
-      height:14px;
-      margin: 0;
-      padding:28px 6px 2px 6px;
+      height:44px;
+      padding:0 15px;
       line-height:14px;
       text-align:center;
       position:relative;
-      border-left:1px solid #777777;
-      margin-left:15px;
     }
   &:hover a{
     border-left-color:#FF3399;
@@ -41,4 +35,10 @@
     transition:color 300ms linear 0s;
     color:white;
   }
+}
+:local(.border){
+  border-left:1px solid #777777;
+}
+:local(.border):hover{
+  border-left-color:#FF3399;
 }
