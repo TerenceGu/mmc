@@ -50,15 +50,46 @@ const Container = ({ dispatch, lowerFix, categories }) => {
           Object.keys(categories).map(value => (
             <li>
               <a href={categories[value].link}>{value}</a>
-              <div className={ styles.list }>
-                <ul className={styles.justIn}>
-                  {
-                    Object.keys(categories[value].children).map(child => (
-                      <li><a href={categories[value].children[child]}>{child}</a></li>
-                    ))
-                  }
-                </ul>
-              </div>
+                {
+                  !/^ul\d+$/g.test(Object.keys(categories[value].children)[0]) ?
+                    <div className={ styles.list }>
+                      <ul className={styles.justIn}>
+                      {
+                        Object.keys(categories[value].children).map(child => (
+                          <li><a href={categories[value].children[child]}>{child}</a></li>
+                        ))
+                      }
+                      </ul>
+                    </div>
+                    :
+                    <div className={ classnames(styles.list, styles.multiUl) }>
+                      {
+                        Object.keys(categories[value].children).map(ul => (
+                           <ul className={ styles }>
+                             {
+                               Object.keys(categories[value].children[ul]).map(subkey => (
+                                 <li>
+                                   <h1>
+                                     <a href={categories[value].children[ul][subkey].link}>{subkey}</a>
+                                   </h1>
+                                   {
+                                     categories[value].children[ul][subkey].children ?
+                                       Object.keys(categories[value].children[ul][subkey].children).map(subkey2 => (
+                                         <li>
+                                           <a href={categories[value].children[ul][subkey].children[subkey2]}>
+                                             {subkey2}
+                                           </a>
+                                         </li>
+                                       )) : null
+                                   }
+                                 </li>
+                               ))
+                             }
+                           </ul>
+                        ))
+                      }
+                    </div>
+                }
             </li>
           ))
         }
@@ -66,6 +97,9 @@ const Container = ({ dispatch, lowerFix, categories }) => {
         {lowerFix ? <li><ShoppingBag goodsNum={0} /></li> : null}
       </ul>
       </div>
+      <div style={{ width: '100%', height: '1500px', clear: 'both' }}></div>
+      <h1>wer</h1>
+      <h1>eewr</h1>
     </div>
   );
 };
