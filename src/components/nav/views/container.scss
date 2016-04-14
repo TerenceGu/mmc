@@ -9,6 +9,7 @@
   }
   ul{
     list-style-type: none;
+    padding:0;
     margin:0;
   }
   h1 {
@@ -42,6 +43,8 @@
   }
 }
 :local(.lowerHeader){
+  z-index:100;
+  background-color:#FFF;
   text-align:center;
   border-bottom:1px solid #DEDEDE;
   li{
@@ -72,6 +75,8 @@
       display:none;
       position:absolute;
       box-shadow:0 0 4px rgba(0,0,0,0.08);
+      z-index:100;
+      background-color:#FFF;
     }
     ul {
       padding:20px;
@@ -117,7 +122,6 @@
   position:fixed;
   top:0;
   width:100%;
-  z-index:100;
 }
 :local(.searchBarLi) {
   width:175px;
