@@ -1,8 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-
 import styles from './header-info.scss';
-
 import { changePopupVisibility } from '../data/actions';
 
 const HeaderInfo = ({ dispatch, showPopWindow }) => {
@@ -25,7 +23,7 @@ const HeaderInfo = ({ dispatch, showPopWindow }) => {
           </a>
         </li>
         <li className={styles.firstOrder}>
-          <a href="#login_register.php">
+          <a>
             <span className={styles.colored}>20% OFF</span> Your First Order
           </a>
         </li>
@@ -33,12 +31,16 @@ const HeaderInfo = ({ dispatch, showPopWindow }) => {
       <div className={styles.popwindow} style={{ display: showPopWindow ? 'block' : 'none' }}>
         <div className={styles.popwindowShadow} onClick={closePopupWindow}></div>
         <div className={styles.popwindowContent}>
-          <img className={styles.popwindowClose} src="//statics.makemechic.com/image/em/delete_va04e357.png" onClick={closePopupWindow} />
+          <img
+            className={styles.popwindowClose}
+            src="//statics.makemechic.com/image/em/delete_va04e357.png"
+            onClick={closePopupWindow}
+          />
           <p className={styles.freeshipOne}>Free Shipping Over $29 (US Only)</p>
           <p className={styles.freeshipTwo}>
             No code required, can be combined with other promos.</p>
           <div className={styles.iconContainer}>
-            <img src="//statics.makemechic.com/image/em/usflag_v5b24232.png"/>
+            <img src="//statics.makemechic.com/image/em/usflag_v5b24232.png" />
           </div>
           <div className={styles.windowContent}>
             <p><strong>20%</strong> OFF YOUR FIRST ORDER</p>
