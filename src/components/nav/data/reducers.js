@@ -24,18 +24,79 @@ const defaultState = {
     CLOTHING: {
       link: '#',
       children: {
-        Dresses: '#',
-        Top: '#',
-        'Hoodies & Sweatshirts': '#',
-        Sweaters: '#',
-        Outerwear: '#',
-        Kimono: '#',
-        'Jumpsuits & Rompers': '#',
-        'Co-ordinates': '#',
-        Shoes: '#',
-        Accessories: '#',
-        Bottoms: '#',
-        Swimwear: '#'
+        ul1: {
+          DRESSES: {
+            link: '#',
+            children: {
+              'Boho Dresses': '#',
+              'Casual Dresses': '#',
+              'Floral Dresses': '#',
+              'Maxl Dresses': '#',
+              'Party Dresses': '#',
+              'Bodycon Dresses': '#',
+              'Lace Dresses': '#',
+              'Backless Dresses': '#',
+              'MIDI Dresses': '#',
+              'CutOut Dresses': '#',
+              'Skater Dresses': '#'
+            }
+          }
+        },
+        ul2: {
+          OUTERWEAR: {
+            link: '#',
+            children: {
+              Coats: '#',
+              Jackets: '#',
+              Blazers: '#',
+              Vests: '#'
+            }
+          },
+          TOPS: {
+            link: '#',
+            children: {
+              'T-shirts': '#',
+              'Tank Top': '#',
+              Bodysuits: '#',
+              'Blouses & Shirts': '#',
+              Bralettes: '#'
+            }
+          }
+        },
+        ul3: {
+          Sweaters: {
+            link: '#',
+            children: {
+              Jumpers: '#',
+              Cardigans: '#',
+              Vests: '#'
+            }
+          },
+          Bottoms: {
+            link: '#',
+            children: {
+              Pants: '#',
+              Skirts: '#',
+              Shorts: '#',
+              Leggins: '#'
+            }
+          },
+          'JUMPSUITS & ROMPERS': {
+            link: '#'
+          },
+          'Hoodies & Sweatshirts': {
+            link: '#'
+          },
+          SWIMWEAR: {
+            link: '#'
+          },
+          KIMONOS: {
+            link: '#'
+          },
+          'CO-ORDINATES': {
+            link: '#'
+          }
+        }
       }
     },
     DRESSES: {
@@ -64,13 +125,14 @@ const defaultState = {
         Flats: '#'
       }
     },
-    OUTERWEAR: {
+    TOPS: {
       link: '#',
       children: {
-        Coats: '#',
-        Jackets: '#',
-        Blazers: '#',
-        Vests: '#'
+        'T-shirts': '#',
+        'Tank Top': '#',
+        Bodysuits: '#',
+        'Blouses & Shirts': '#',
+        Bralettes: '#'
       }
     },
     ACCESSORIES: {
