@@ -18,7 +18,6 @@
   src: url('fonts/proxima-nova.eot');
   src: url('fonts/proxima-nova.eot?kvhu6k#iefix') format('embedded-opentype'),
   url('fonts/proxima-nova.ttf?kvhu6k') format('truetype'),
-  url('fonts/proxima-nova.otf') format('opentype'),
   url('fonts/proxima-nova.woff?kvhu6k') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -29,7 +28,6 @@
   src:    url('fonts/proxima-nova-bold.eot');
   src:    url('fonts/proxima-nova-bold.eot?kvhu6k#iefix') format('embedded-opentype'),
   url('fonts/proxima-nova-bold.ttf?kvhu6k') format('truetype'),
-  url('fonts/proxima-nova-bold.otf') format('opentype'),
   url('fonts/proxima-nova-bold.woff?kvhu6k') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -39,7 +37,6 @@
   src:    url('fonts/proxima-nova-light-italic.eot');
   src:    url('fonts/proxima-nova-light-italic.eot?kvhu6k#iefix') format('embedded-opentype'),
   url('fonts/proxima-nova-light-italic.ttf?kvhu6k') format('truetype'),
-  url('fonts/proxima-nova-light-italic.otf') format('opentype'),
   url('fonts/proxima-nova-light-italic.woff?kvhu6k') format('woff');
   font-weight: normal;
   font-style: normal;
