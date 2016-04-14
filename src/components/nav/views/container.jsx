@@ -72,6 +72,7 @@ const Container = ({ dispatch, lowerFix, categories }) => {
 };
 
 Container.propTypes = {
+  dispatch: PropTypes.func.isRequired,
   lowerFix: PropTypes.bool.isRequired,
   categories: PropTypes.bool.isRequired
 };

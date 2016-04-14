@@ -109,8 +109,8 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-    case '<%= appnameUpper %>_INIT':
-      return state;
+    case 'NAV_INIT':
+      return Object.assign({}, state, action.value);
     case 'NAV_SET_LOWER_FIX':
       return Object.assign({}, state, {
         lowerFix: action.flag
