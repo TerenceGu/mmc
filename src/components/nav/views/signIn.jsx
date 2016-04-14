@@ -3,25 +3,21 @@ import { connect } from 'react-redux';
 
 import styles from './signIn.scss';
 
-
-const Container = ({ dispatch,isLogin }) => {
-    return (
-        <div >
-            <a className={styles.login} href="#">
-            {
-                isLogin?
-                    <span>Signed</span>:
-                    <span>Sign in<br /> or Registe</span>
-            }
-            </a>
-        </div>
-    );
-};
+const Container = ({ isLogin }) =>
+  <div>
+    <a className={styles.login} href="#">
+      {
+        isLogin ?
+          <span>Signed</span> :
+          <span>Sign in<br /> or Registe</span>
+      }
+    </a>
+  </div>;
 
 Container.propTypes = {
-    isLogin:React.PropTypes.bool.isRequired
+  isLogin: PropTypes.bool.isRequired
 };
 
 
-const login= connect()(Container);
+const login = connect()(Container);
 export default login;

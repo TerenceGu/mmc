@@ -19,24 +19,12 @@ const Container = ({ dispatch, lowerFix, categories }) => {
     function scrollListener() {
       if (lower.getBoundingClientRect().top <= 0
         && upper.getBoundingClientRect().bottom <= 0) {
-        dispatch(setLowerFix(true));
+        requestAnimationFrame(() => dispatch(setLowerFix(true)));
       } else if (upper.getBoundingClientRect().bottom > 0) {
-        dispatch(setLowerFix(false));
+        requestAnimationFrame(() => dispatch(setLowerFix(false)));
       }
     }
-
-    function deBounce(fun, timeout) {
-      let prev = Date.now();
-      return function (...args) {
-        const now = Date.now();
-        if (Date.now() - prev >= timeout) {
-          prev = now;
-          fun.apply(this, args);
-        }
-      };
-    }
-
-    window.addEventListener('scroll', deBounce(scrollListener, 0), false);
+    window.addEventListener('scroll', scrollListener, false);
   };
   return (
     <div className={styles.nav}>
@@ -75,7 +63,7 @@ const Container = ({ dispatch, lowerFix, categories }) => {
           ))
         }
         {lowerFix ? <li className={styles.searchBarLi}><SearchBar /></li> : null}
-        {lowerFix ? <li><ShoppingBag goodsNum={0}/></li> : null}
+        {lowerFix ? <li><ShoppingBag goodsNum={0} /></li> : null}
       </ul>
       </div>
       <div style={{ width: '100%', height: '1500px', clear: 'both' }}></div>
@@ -84,15 +72,14 @@ const Container = ({ dispatch, lowerFix, categories }) => {
 };
 
 Container.propTypes = {
-  lowerFix: React.PropTypes.bool.isRequired,
-  categories: React.PropTypes.bool.isRequired
+  lowerFix: PropTypes.bool.isRequired,
+  categories: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = ({ nav }) => (
-{
-  lowerFix: nav.lowerFix,
-  categories: nav.categories
-}
+  {
+    lowerFix: nav.lowerFix,
+    categories: nav.categories
+  }
 );
-
 export default connect(mapStateToProps)(Container);
