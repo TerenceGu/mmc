@@ -1,6 +1,7 @@
 :local(.currencyCateContainer) {
   position: relative;
   float: left;
+  margin-left:20px;
 }
 
 
@@ -54,7 +55,7 @@
   background: #fff;
   padding: 10px;
   margin:0;
-  z-index: 10;
+  z-index: 100;
   &:before{
     background: url(http://statics.makemechic.com/image/dot_t_v518e96e.png) no-repeat scroll 20px 2px;
     content: "";
@@ -63,7 +64,7 @@
     position: absolute;
     left: 0;
     top: -12px;
-    z-index: 10;
+    z-index: 100;
   }
   a{
     color: #000;
