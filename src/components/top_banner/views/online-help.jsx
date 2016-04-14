@@ -12,8 +12,8 @@ const OnlineHelp = () => (
           <a><img src="https://makemechic.comm100.com/LiveChatServer/DBResource/DBImage.ashx?imgId=2&type=2&siteId=214771" /></a>
         </div>
         <p><strong>After-sales</strong></p>
-        <p>Please log in to&nbsp
-          <strong>"MY ORDERS"</strong>&nbsp
+        <p>Please log in to&nbsp;
+          <strong>"MY ORDERS"</strong>&nbsp;
           to get your order status or other after-sales issues.</p>
         <a>Submit a ticket</a>
       </div>
