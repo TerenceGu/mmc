@@ -1,25 +1,43 @@
-import React from 'react';
-
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-
-//import { removeTodoItem } from '../actions';
-
+import { changeCurrency } from '../data/actions';
 import styles from './currency-cate.scss';
 
-const CurrencyCate = ({ dispatch, currency }) => {
-  return (
-      <div className={styles.currencyCateContainer}>
-        <a rel="nofollow" className={styles.currencySelect} title="US$" atr1="USD">US$</a>
-        <div className={styles.currencyCate}>
+const currency = [
+  { content: 'US Dollar', currencySymbol: 'US$', icon: '' },
+  { content: 'Euro', currencySymbol: 'EUR€', icon: '' }
+];
 
-        </div>
+const CurrencyCate = ({ dispatch, currentCurrency }) => {
+  const selectCurrency = index => () => {
+    dispatch(changeCurrency(index));
+  };
+
+  return (
+    <div className={styles.currencyCateContainer}>
+      <a rel="nofollow" className={styles.currencySelect} title="US$"
+        atr1="USD"
+      >
+        {currency[currentCurrency].currencySymbol}</a>
+      <div className={styles.currencyCate}>
+        {currency.map((item, index) => (
+          <a rel="nofollow" onClick={selectCurrency(index)} data-icon={item.icon}>
+            {item.content}
+          </a>
+        ))}
       </div>
-    );
+    </div>
+  );
 };
 
 CurrencyCate.propTypes = {
-  currency: React.PropTypes.arrayOf(React.PropTypes.string),
-  dispatch: React.PropTypes.func.isRequired
+  currency: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+  currentCurrency: PropTypes.number.isRequired,
+  dispatch: PropTypes.func.isRequired
 };
 
-export default CurrencyCate;
+const mapStateToProps = ({ top_banner }) => ({
+  currentCurrency: top_banner.currencyIndex
+});
+
+export default connect(mapStateToProps)(CurrencyCate);
