@@ -7,21 +7,23 @@
   text-align:left;
   border:1px solid #E7E7E7;
   background-color:white;
+  position:relative;
   input[type="text"] {
     border-width:0;
     line-height:26px;
     height:26px;
     float:left;
     text-indent:5px;
+    width:100%;
+    background-color:transparent;
   }
   input[type="button"] {
+    position:absolute;
+    right:2px;
     height:26px;
     width:30px;
     cursor:pointer;
     border-width:0;
     background:url("http://statics.makemechic.com/image/search_vb8c196f.png") center center no-repeat;
-  }
-  :local(.long){
-    width:325px;
   }
 }

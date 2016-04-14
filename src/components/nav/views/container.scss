@@ -43,9 +43,10 @@
   li{
     display:inline-block;
     text-align:center;
-    line-height:44px;
+    height:44px;
     font-size:13px;
     position:relative;
+    line-height:44px;
   }
   &>ul>li>a{
     display:block;
@@ -59,7 +60,6 @@
     display:none;
     position:absolute;
     box-shadow:0 0 4px rgba(0,0,0,0.08);
-
   }
   ul ul{
     float:left;
@@ -93,6 +93,14 @@
 :local(.justIn){
   width:161px;
 }
-:local(.long){
-  width:325px;
+
+:local(.fix){
+  position:fixed;
+  top:0;
+  width:100%;
+}
+:local(.searchBarLi){
+  width:175px;
+  vertical-align:bottom;
+
 }

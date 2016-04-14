@@ -10,7 +10,7 @@ import styles from './search-bar.scss';
 const Container = ({ dispatch,className }) => {
     return (
         <div className={styles.searchBar}>
-            <input type="text" className={className} placeholder="Search Make Me Chic" />
+            <input type="text" className={className} placeholder="Search MakeMeChic" />
             <input type="button" />
         </div>
     );
