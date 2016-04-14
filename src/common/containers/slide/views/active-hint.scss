@@ -1,0 +1,10 @@
+@import "../../../style/font-face.css";
+:local(.activeHint) {
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+:local(.icon) {
+  font-family: icomoon !important;
+  margin: 0 0.25rem;
+}
