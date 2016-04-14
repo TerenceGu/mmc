@@ -1,9 +1,13 @@
+@import "../../../common/style/color.scss";
+@import "../../../common/style/font.scss";
+@import url("../../../common/style/font-face.css");
+
 :local(.topBannerContainer){
   width:100%;
   height:40px;
   line-height:40px;
-  background-color: #2e2e2e;
-  font-family: ProximaNova, Tahoma;
+  background-color: $black;
+  font-family: 'Proxima Nova', Tahoma;
   font-size: 13px;
 }
 
@@ -11,12 +15,4 @@
   width:960px;
   height:40px;
   margin:0 auto;
-}
-
-:local(.currencyCate){
-
-}
-
-:local(.headerInfo){
-
 }
