@@ -3,7 +3,7 @@
   font:$enCommon;
   margin-top:5px;
   height:26px;
-  padding:6px 0;
+  padding:6px 32px 6px 0;
   text-align:left;
   border:1px solid #E7E7E7;
   background-color:white;
@@ -28,6 +28,7 @@
   }
 }
 :local(.narrow){
-  padding:0 32px 0 0;
+  padding-top:0;
+  padding-bottom:0;
   top:2px;
 }

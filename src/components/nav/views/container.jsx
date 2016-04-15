@@ -51,7 +51,7 @@ const Container = ({ dispatch, lowerFix, categories }) => {
             <li>
               <a href={categories[value].link}>{value}</a>
                 {
-                  !/^ul\d+$/g.test(Object.keys(categories[value].children)[0]) ?
+                  !/^list\d+$/g.test(Object.keys(categories[value].children)[0]) ?
                     <div className={ styles.list }>
                       <ul className={styles.justIn}>
                       {
@@ -103,6 +103,7 @@ const Container = ({ dispatch, lowerFix, categories }) => {
         {lowerFix ? <li><ShoppingBag goodsNum={0} /></li> : null}
       </ul>
       </div>
+      <div style={{ width: '100%', height: '1200px' }}></div>
     </div>
   );
 };

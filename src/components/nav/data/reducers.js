@@ -24,7 +24,7 @@ const defaultState = {
     CLOTHING: {
       link: '#',
       children: {
-        ul1: {
+        list1: {
           DRESSES: {
             link: '#',
             children: {
@@ -42,7 +42,7 @@ const defaultState = {
             }
           }
         },
-        ul2: {
+        list2: {
           OUTERWEAR: {
             link: '#',
             children: {
@@ -63,7 +63,7 @@ const defaultState = {
             }
           }
         },
-        ul3: {
+        list3: {
           Sweaters: {
             link: '#',
             children: {
