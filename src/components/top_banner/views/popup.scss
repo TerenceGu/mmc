@@ -28,10 +28,13 @@
 }
 
 :local(.popwindowClose){
-  float: right;
-  margin-top: 15px;
-  margin-right: 20px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
   cursor: pointer;
+  background-image: url(image/delete.png);
 }
 
 :local(.freeshipOne){
@@ -55,8 +58,10 @@
 :local(.iconContainer){
   text-align: center;
   margin:5px auto 20px;
+  height: 53px;
   padding: 0;
   border: 0;
+  background: url(image/flags/us-flag.png) center center no-repeat;
 }
 
 :local(.windowContent){

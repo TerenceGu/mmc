@@ -15,7 +15,7 @@
     text-decoration: none;
   }
   > a:before {
-    background: url(http://statics.makemechic.com/image/image_icon_vc151b71.png) no-repeat scroll -190px -10px;
+    background: url(image/chat.png);
     content: "";
     height: 15px;
     width: 17px;
@@ -25,7 +25,7 @@
   }
   > a:after {
     content: "";
-    background: url(http://statics.makemechic.com/image/image_icon_vc151b71.png) no-repeat scroll -190px -2px transparent;
+    background: url(image/down-arrow-white.png);
     height: 4px;
     width: 7px;
     position: absolute;
@@ -33,7 +33,7 @@
     right: -15px;
   }
   > a:hover:after {
-    background: url(http://statics.makemechic.com/image/image_icon_vc151b71.png) no-repeat scroll -200px -2px transparent;
+    background: url(image/up-arrow-white.png);
   }
 }
 
@@ -75,7 +75,7 @@
 }
 
 :local(.liveChat:before) {
-  background: url(http://statics.makemechic.com/image/dot_t_v518e96e.png) no-repeat scroll 20px 2px;
+  background: url(image/dot.png) 20px 2px no-repeat;
   content: "";
   height: 12px;
   width: 100%;
