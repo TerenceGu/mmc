@@ -11,7 +11,7 @@ import { toNextPage, toPreviousPage } from '../data/actions.js';
 import styles from './container.scss';
 
 
-const Container = ({ dispatch, images, pageInfo }) => {
+const Container = ({ dispatch, images, currentCurrency, pageInfo }) => {
   const count = Math.ceil(pageInfo.totalWidth / pageInfo.pageWidth);
 
   function leftArrowClick() {
@@ -24,6 +24,7 @@ const Container = ({ dispatch, images, pageInfo }) => {
     <div className={styles.outermost}>
       <div className={ styles.bestSellerOuter }>
         <InnerContainer
+          currentCurrency={ currentCurrency }
           totalWidth={ pageInfo.totalWidth }
           pageWidth={ pageInfo.pageWidth }
           images={ images }
@@ -53,13 +54,15 @@ const Container = ({ dispatch, images, pageInfo }) => {
 };
 
 Container.propTypes = {
+  currentCurrency: PropTypes.string.required,
   dispatch: PropTypes.func.isRequired,
   images: PropTypes.array.isRequired,
   pageInfo: PropTypes.object.isRequired
 };
 
-const mapStateToProps = ({ best_seller }) => (
+const mapStateToProps = ({ best_seller, common_currency }) => (
   {
+    currentCurrency: common_currency.currencyName,
     pageInfo: best_seller.pageInfo,
     images: best_seller.images
   }

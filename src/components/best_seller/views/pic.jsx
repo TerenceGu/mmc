@@ -5,7 +5,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import styles from './pic.scss';
 
-const Container = ({ picinfo }) =>
+const Container = ({ picinfo, currentCurrency }) =>
   (
     <div className={ styles.pic }>
       <a href={ picinfo.link }>
@@ -18,17 +18,18 @@ const Container = ({ picinfo }) =>
       </a>
       <div className={ styles.prices }>
         <div className={ styles.originalPrice }>
-          { picinfo.originalPrice }
+          { picinfo.originalPrice[currentCurrency] }
         </div>
         <div className={ styles.currentPrice }>
-          { picinfo.currentPrice }
+          { picinfo.currentPrice[currentCurrency] }
         </div>
       </div>
     </div>
   );
 
 Container.propTypes = {
-  picinfo: PropTypes.object.isRequired
+  picinfo: PropTypes.object.isRequired,
+  currentCurrency: PropTypes.string.isRequired
 };
 
 const Pic = connect()(Container);
