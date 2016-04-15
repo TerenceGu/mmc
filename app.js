@@ -66,8 +66,7 @@ app.use(function *(next) {
         {
           link: '',
           name: 'shopping bag'
-        },
-        
+        }
       ]
     },
     {
@@ -129,17 +128,9 @@ app.use(function *(next) {
   this.set('Access-Control-Allow-Origin', '*');
 });
 
-//  根据环境变量设定是否压缩html代码以及设定静态文件服务器
-if (process.env.NODE_ENV === 'production') {
-  app.use(require('koa-html-minifier')({
-    collapseWhitespace: true,
-    removeComments: true,
-    removeCommentsFromCDATA: true,
-    minifyJS: true
-  }));
-} else {
-  app.use(require('koa-static')(path.join(__dirname, 'public')));
-}
+
+app.use(require('koa-static')(path.join(__dirname, 'public')));
+
 
 app.use(bigPipe);
 

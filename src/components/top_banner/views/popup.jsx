@@ -13,16 +13,14 @@ const Popup = ({ dispatch, showPopWindow }) => {
     <div className={styles.popwindow} style={{ display: showPopWindow ? 'block' : 'none' }}>
       <div className={styles.popwindowShadow} onClick={closePopupWindow}></div>
       <div className={styles.popwindowContent}>
-        <img
+        <span
           className={styles.popwindowClose}
-          src="//statics.makemechic.com/image/em/delete_va04e357.png"
           onClick={closePopupWindow}
         />
         <p className={styles.freeshipOne}>Free Shipping Over $29 (US Only)</p>
         <p className={styles.freeshipTwo}>
           No code required, can be combined with other promos.</p>
         <div className={styles.iconContainer}>
-          <img src="//statics.makemechic.com/image/em/usflag_v5b24232.png" />
         </div>
         <div className={styles.windowContent}>
           <p><strong>20%</strong> OFF YOUR FIRST ORDER</p>

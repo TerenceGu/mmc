@@ -18,17 +18,18 @@
 :local(.currencySelect) {
   &:before{
     content: "";
-    background: url(http://statics.makemechic.com/image/flag_v7960c25.png) no-repeat scroll 0 0 transparent;
+    background-image: url(image/flags/us-flag.png);
+    background-size: cover;
     float: left;
-    height: 11px;
+    height: 9px;
     position: absolute;
     top: 15px;
     left: -20px;
-    width: 20px;
+    width: 15px;
   }
   &:after {
     content: "";
-    background: url(http://statics.makemechic.com/image/image_icon_vc151b71.png) no-repeat scroll -190px -2px transparent;
+    background: url(image/down-arrow-white.png);
     display: inline-block;
     height: 4px;
     width: 7px;
@@ -37,7 +38,7 @@
     right: -15px;
   }
   &:hover:after {
-    background: url(http://statics.makemechic.com/image/image_icon_vc151b71.png) no-repeat scroll -200px -2px transparent;
+    background: url(image/up-arrow-white.png);
   }
 }
 
@@ -45,7 +46,6 @@
 :local(.currencyCate) {
   display:none;
   position:absolute;
-  float: left;
   left: 0;
   top: 40px;
   width: 170px;
@@ -57,7 +57,7 @@
   margin:0;
   z-index: 100;
   &:before{
-    background: url(http://statics.makemechic.com/image/dot_t_v518e96e.png) no-repeat scroll 20px 2px;
+    background: url(image/dot.png) no-repeat 20px 0;
     content: "";
     height: 12px;
     width: 100%;
@@ -74,10 +74,12 @@
   }
   a:before{
     content: "";
-    background: url(http://statics.makemechic.com/image/flag_v7960c25.png) no-repeat scroll 0 0 transparent;
+    background: url(image/flags/us-flag.png);
+    background-size: cover;
     float: left;
     height: 11px;
     width: 20px;
+    margin-right: 2px;
   }
   a:hover{
     background:#e5e5e5;

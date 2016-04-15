@@ -1,23 +1,12 @@
-/**
- * Created by fed on 16/4/8.
- */
-import React, { PropTypes } from 'react';
-import { connect } from 'react-redux';
-
+import React from 'react';
+import TrendingBanner from './trending-banner.jsx';
 import styles from './container.scss';
 
-
-const Container = ({ dispatch }) => {
-  return (
-    <div>
-      
+const Container = () =>
+ (
+    <div className={styles.trendingContainer}>
+      <TrendingBanner />
     </div>
   );
-};
 
-Container.propTypes = {
-  
-};
-
-
-export default connect()(Container);
+export default Container;
