@@ -5,17 +5,19 @@ import indexBanner from '../../components/index_banner';
 import nav from '../../components/nav';
 import topBanner from '../../components/top_banner';
 import trending from '../../components/trending';
+import mainHeader from '../../components/main_header';
 
 import './style.scss';
 
 window.reduxState = createStore(combineReducers(
   Object.assign({
-    
+
   },
     bestSeller,
     indexBanner,
     nav,
     topBanner,
-    trending
+    trending,
+    mainHeader
   )
 ));
