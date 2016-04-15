@@ -39,13 +39,13 @@ const CurrencyCate = ({ dispatch, currentCurrency }) => {
         {currency[currentCurrency].currencySymbol}</a>
       <div className={styles.currencyCate}>
         {currency.map((item, index) => (
-          <a rel="nofollow" onClick={selectCurrency(index)} data-icon={item.icon}>
+          <a rel="nofollow" onClick={selectCurrency(index)} data-icon={item.icon} key={item.name}>
             {item.content}
           </a>
         ))}
       </div>
     </div>
-  );
+);
 };
 
 CurrencyCate.propTypes = {
