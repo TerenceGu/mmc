@@ -2,7 +2,7 @@
 @import '../../../common/style/font.scss';
 
 :local(.pic) {
-  background: url('https://statics.makemechic.com/image/image_icon_vc151b71.png') no-repeat scroll -230px 0 transparent;
+  background: url(image/shopping-bag.png);
   display: block;
   height: 27px;
   width: 21px;
@@ -29,7 +29,7 @@
       background-color: #FF3399;
     }
     :local(.pic) {
-      background: url('https://statics.makemechic.com/image/image_icon_vc151b71.png') no-repeat scroll 0 0 transparent;
+      background: url(image/shopping-bag.png);
       color: #FF3399;
     }
     :local(.myBagWord) {

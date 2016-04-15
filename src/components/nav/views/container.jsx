@@ -30,7 +30,7 @@ const Container = ({ dispatch, lowerFix, categories }) => {
     <div className={styles.nav}>
       <div className={styles.upperHeader} ref={ node => { upper = upper || node; } }>
         <div className={styles.upperHeaderInner}>
-          <a href="#"><img src="http://statics.makemechic.com/image/logo_v6571b05.png" /></a>
+          <a href="#" className={styles.logoLink}></a>
           <div className={styles.headerRight}>
             <div className={styles.logoRight}>
               <ShoppingBag goodsNum={0} />

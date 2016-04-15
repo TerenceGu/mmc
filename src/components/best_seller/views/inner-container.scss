@@ -1,0 +1,10 @@
+:local(.innerContainer) {
+  position: relative;
+  transition: transform 500ms linear;
+  white-space: nowrap;
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    width: 220px;
+  }
+}

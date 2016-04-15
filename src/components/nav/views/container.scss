@@ -127,3 +127,9 @@
   width:175px;
   vertical-align:bottom;
 }
+
+:local(.logoLink) {
+  width: 135px;
+  height: 69px;
+  background-image: url(image/logo.png);
+}
