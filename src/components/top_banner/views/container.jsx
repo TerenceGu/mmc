@@ -6,6 +6,7 @@ import styles from './container.scss';
 import CurrencyCate from './currency-cate.jsx';
 import HeaderInfo from './header-info.jsx';
 import OnlineHelp from './online-help.jsx';
+import Popup from './popup.jsx';
 
 const Container = () => (
     <div className={styles.topBannerContainer}>
@@ -13,6 +14,7 @@ const Container = () => (
         <CurrencyCate />
         <OnlineHelp />
         <HeaderInfo />
+        <Popup />
       </div>
     </div>
 );

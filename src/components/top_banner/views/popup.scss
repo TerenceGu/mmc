@@ -1,32 +1,3 @@
-:local(.headerInfo){
-  margin:auto;
-  display:table;
-  height:40px;
-  color:#fff;
-}
-
-:local(.headerInfo ul){
-  margin:0;
-}
-
-:local(.headerInfo ul li){
-  float:left;
-  margin-left: 25px;
-  cursor: pointer;
-}
-:local(.headerInfo ul li a){
-  color:#fff;
-  text-decoration: none;
-}
-:local(.headerInfo ul li a:hover){
-  text-decoration: underline;
-}
-
-:local(.headerInfo ul li b){
-  color:#e1298e;
-}
-
-
 :local(.popwindow){
   display:none;
 }
@@ -111,7 +82,7 @@
   font-size: 14px;
   line-height: 18px;
   text-align: center;
- }
+}
 
 :local(.shippingPolicy){
   float:right;
