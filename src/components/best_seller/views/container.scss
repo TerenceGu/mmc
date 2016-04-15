@@ -1,0 +1,42 @@
+@import url("../../../common/style/font-face.css");
+:local(.outermost) {
+  position: relative;
+  //width: 100%;
+  width: 980px;
+  :local(.btn) {
+    font-family: icomoon !important;
+    font-size: 20px;
+    height: 50px;
+    width: 30px;
+    position: absolute;
+    top: 150px;
+    background-color :transparent;
+    border-width: 0;
+    cursor: pointer;
+    color: #B9B9B9;
+    &:hover {
+      color: #1B1B1B;
+    }
+  }
+  :local(.leftArrow) {
+    left: 0;
+  }
+  :local(.rightArrow) {
+    right: 0;
+  }
+  :local(.bestSellerOuter) {
+    margin:0 30px;
+    overflow: hidden;
+    a {
+      text-decoration: none;
+      color: #000000;
+      cursor: pointer;
+    }
+    li, ul, h1 {
+      padding: 0;
+    }
+    dl, ul, ol {
+      list-style-type: none;
+    }
+  }
+}
