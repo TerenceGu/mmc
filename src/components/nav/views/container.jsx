@@ -47,16 +47,20 @@ const Container = ({ dispatch, lowerFix, categories }) => {
       >
       <ul>
         {
-          Object.keys(categories).map(value => (
-            <li>
+          Object.keys(categories).map((value, index0) => (
+            <li key={index0}>
               <a href={categories[value].link}>{value}</a>
                 {
                   !/^list\d+$/g.test(Object.keys(categories[value].children)[0]) ?
                     <div className={ styles.list }>
                       <ul className={styles.justIn}>
                       {
-                        Object.keys(categories[value].children).map(child => (
-                          <li><a href={categories[value].children[child]}>{child}</a></li>
+                        Object.keys(categories[value].children).map((child, index1) => (
+                          <li key={ index1 }>
+                            <a href={categories[value].children[child]}>
+                              {child}
+                            </a>
+                          </li>
                         ))
                       }
                       </ul>
@@ -67,8 +71,8 @@ const Container = ({ dispatch, lowerFix, categories }) => {
                         Object.keys(categories[value].children).map(ul => (
                            <ul>
                              {
-                               Object.keys(categories[value].children[ul]).map(subkey => (
-                                 <li>
+                               Object.keys(categories[value].children[ul]).map((subkey, index2) => (
+                                 <li key={index2}>
                                    <h1>
                                      <a href={categories[value].children[ul][subkey].link}>
                                        {subkey}
@@ -77,8 +81,8 @@ const Container = ({ dispatch, lowerFix, categories }) => {
                                    {
                                      categories[value].children[ul][subkey].children ?
                                        Object.keys(categories[value].children[ul][subkey].children)
-                                         .map(subkey2 => (
-                                         <li>
+                                         .map((subkey2, index3) => (
+                                         <li key={index3}>
                                            <a href={
                                             categories[value].children[ul][subkey].children[subkey2]
                                            }

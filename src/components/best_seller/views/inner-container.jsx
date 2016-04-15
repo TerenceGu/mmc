@@ -6,7 +6,7 @@ import Pic from './pic.jsx';
 import styles from './inner-container.scss';
 
 
-const Container = ({ images, pageIndex, pageWidth, totalWidth }) =>
+const Container = ({ images, pageIndex, pageWidth, totalWidth, currentCurrency }) =>
   (
     <div
       className={ styles.innerContainer }
@@ -17,10 +17,10 @@ const Container = ({ images, pageIndex, pageWidth, totalWidth }) =>
     >
       <ul>
         {
-          images.map((value) =>
+          images.map((value, index) =>
             (
-              <li>
-                <Pic picinfo={ value } />
+              <li key={ index }>
+                <Pic currentCurrency={ currentCurrency } picinfo={ value } />
               </li>
             )
           )
@@ -30,6 +30,7 @@ const Container = ({ images, pageIndex, pageWidth, totalWidth }) =>
   );
 
 Container.propTypes = {
+  currentCurrency: PropTypes.string.isRequired,
   dispatch: PropTypes.func.isRequired,
   images: PropTypes.array.isRequired,
   totalWidth: PropTypes.number.isRequired,

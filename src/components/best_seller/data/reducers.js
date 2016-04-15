@@ -12,85 +12,181 @@ const defaultState = {
       src: 'http://img.makemechic.com/images/emmastyle.com/201512/1449221520361332223.jpg',
       link: '#',
       disc: 'Black Long Sleeve Kaftan Dress',
-      originalPrice: 'US$22.00',
-      currentPrice: 'US$16.90'
+      originalPrice: {
+        USD: 'US$25',
+        EUR: 'EUR€44',
+        GBP: 'GBP£29'
+      },
+      currentPrice: {
+        USD: 'US$18',
+        EUR: 'EUR€20',
+        GBP: 'GBP£23'
+      }
     },
     {
       src: 'http://img.makemechic.com/images/emmastyle.com/201512/1449221520361332223.jpg',
       link: '#',
       disc: 'Black Long Sleeve Kaftan Dress',
-      originalPrice: '',
-      currentPrice: 'US$20.00'
+      originalPrice: {
+        USD: 'US$25',
+        EUR: 'EUR€44',
+        GBP: 'GBP£29'
+      },
+      currentPrice: {
+        USD: 'US$18',
+        EUR: 'EUR€20',
+        GBP: 'GBP£23'
+      }
     },
     {
       src: 'http://img.makemechic.com/images/emmastyle.com/201512/1449221520361332223.jpg',
       link: '#',
       disc: 'Black Long Sleeve Kaftan Dress',
-      originalPrice: '',
-      currentPrice: 'US$20.00'
+      originalPrice: {
+        USD: 'US$25',
+        EUR: 'EUR€44',
+        GBP: 'GBP£29'
+      },
+      currentPrice: {
+        USD: 'US$18',
+        EUR: 'EUR€20',
+        GBP: 'GBP£23'
+      }
     },
     {
       src: 'http://img.makemechic.com/images/emmastyle.com/201512/1449221520361332223.jpg',
       link: '#',
       disc: 'Black Long Sleeve Kaftan Dress',
-      originalPrice: '',
-      currentPrice: 'US$20.00'
+      originalPrice: {
+        USD: 'US$25',
+        EUR: 'EUR€44',
+        GBP: 'GBP£29'
+      },
+      currentPrice: {
+        USD: 'US$18',
+        EUR: 'EUR€20',
+        GBP: 'GBP£23'
+      }
     },
     {
       src: 'http://img.makemechic.com/images/emmastyle.com/201512/1449221520361332223.jpg',
       link: '#',
       disc: 'Black Long Sleeve Kaftan Dress',
-      originalPrice: '',
-      currentPrice: 'US$20.00'
+      originalPrice: {
+        USD: 'US$25',
+        EUR: 'EUR€44',
+        GBP: 'GBP£29'
+      },
+      currentPrice: {
+        USD: 'US$18',
+        EUR: 'EUR€20',
+        GBP: 'GBP£23'
+      }
     },
     {
       src: 'http://img.makemechic.com/images/emmastyle.com/201512/1449221520361332223.jpg',
       link: '#',
       disc: 'Black Long Sleeve Kaftan Dress',
-      originalPrice: '',
-      currentPrice: 'US$20.00'
+      originalPrice: {
+        USD: 'US$25',
+        EUR: 'EUR€44',
+        GBP: 'GBP£29'
+      },
+      currentPrice: {
+        USD: 'US$18',
+        EUR: 'EUR€20',
+        GBP: 'GBP£23'
+      }
     },
     {
       src: 'http://img.makemechic.com/images/emmastyle.com/201512/1449221520361332223.jpg',
       link: '#',
       disc: 'Black Long Sleeve Kaftan Dress',
-      originalPrice: '',
-      currentPrice: 'US$20.00'
+      originalPrice: {
+        USD: 'US$25',
+        EUR: 'EUR€44',
+        GBP: 'GBP£29'
+      },
+      currentPrice: {
+        USD: 'US$18',
+        EUR: 'EUR€20',
+        GBP: 'GBP£23'
+      }
     },
     {
       src: 'http://img.makemechic.com/images/emmastyle.com/201512/1449221520361332223.jpg',
       link: '#',
       disc: 'Black Long Sleeve Kaftan Dress',
-      originalPrice: '',
-      currentPrice: 'US$20.00'
+      originalPrice: {
+        USD: 'US$25',
+        EUR: 'EUR€44',
+        GBP: 'GBP£29'
+      },
+      currentPrice: {
+        USD: 'US$18',
+        EUR: 'EUR€20',
+        GBP: 'GBP£23'
+      }
     },
     {
       src: 'http://img.makemechic.com/images/emmastyle.com/201512/1449221520361332223.jpg',
       link: '#',
       disc: 'Black Long Sleeve Kaftan Dress',
-      originalPrice: '',
-      currentPrice: 'US$20.00'
+      originalPrice: {
+        USD: 'US$25',
+        EUR: 'EUR€44',
+        GBP: 'GBP£29'
+      },
+      currentPrice: {
+        USD: 'US$18',
+        EUR: 'EUR€20',
+        GBP: 'GBP£23'
+      }
     },
     {
       src: 'http://img.makemechic.com/images/emmastyle.com/201512/1449221520361332223.jpg',
       link: '#',
       disc: 'Black Long Sleeve Kaftan Dress',
-      originalPrice: '',
-      currentPrice: 'US$20.00'
+      originalPrice: {
+        USD: 'US$25',
+        EUR: 'EUR€44',
+        GBP: 'GBP£29'
+      },
+      currentPrice: {
+        USD: 'US$18',
+        EUR: 'EUR€20',
+        GBP: 'GBP£23'
+      }
     },
     {
       src: 'http://img.makemechic.com/images/emmastyle.com/201512/1449221520361332223.jpg',
       link: '#',
       disc: 'Black Long Sleeve Kaftan Dress',
-      originalPrice: '',
-      currentPrice: 'US$20.00'
+      originalPrice: {
+        USD: 'US$25',
+        EUR: 'EUR€44',
+        GBP: 'GBP£29'
+      },
+      currentPrice: {
+        USD: 'US$18',
+        EUR: 'EUR€20',
+        GBP: 'GBP£23'
+      }
     },
     {
       src: 'http://img.makemechic.com/images/emmastyle.com/201512/1449221520361332223.jpg',
       link: '#',
       disc: 'Black Long Sleeve Kaftan Dress',
-      originalPrice: '',
-      currentPrice: 'US$20.00'
+      originalPrice: {
+        USD: 'US$25',
+        EUR: 'EUR€44',
+        GBP: 'GBP£29'
+      },
+      currentPrice: {
+        USD: 'US$18',
+        EUR: 'EUR€20',
+        GBP: 'GBP£23'
+      }
     }
   ]
 };
