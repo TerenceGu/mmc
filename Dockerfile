@@ -4,6 +4,8 @@ MAINTAINER yuji
 
 ENV PORT 80
 
+ENV NODE_ENV production
+
 RUN apt-get update
 
 RUN apt-get -y install wget
