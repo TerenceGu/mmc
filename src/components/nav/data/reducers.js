@@ -166,7 +166,8 @@ const defaultState = {
         Swimwear: '#'
       }
     }
-  }
+  },
+  showPrompt: false
 };
 
 export default (state = defaultState, action) => {
@@ -176,6 +177,10 @@ export default (state = defaultState, action) => {
     case 'NAV_SET_LOWER_FIX':
       return Object.assign({}, state, {
         lowerFix: action.flag
+      });
+    case 'NAV_SHOW_PROMPT':
+      return Object.assign({}, state, {
+        showPrompt: action.flag
       });
     default:
       return state;

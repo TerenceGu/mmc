@@ -7,3 +7,9 @@ export const setLowerFix = flag => (
     flag
   }
 );
+export const setShowPrompt = flag => (
+  {
+    type: 'NAV_SHOW_PROMPT',
+    flag
+  }
+);
