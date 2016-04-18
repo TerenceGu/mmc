@@ -8,7 +8,7 @@ import { setShowPrompt } from '../data/actions.js';
 
 import styles from './container.scss';
 
-const Container = ({ dispatch, showPrompt }) => {
+const Container = ({ dispatch, showPrompt, imageLink }) => {
   function timeoutCallback() {
     dispatch(setShowPrompt(true));
   }
@@ -18,6 +18,7 @@ const Container = ({ dispatch, showPrompt }) => {
   function windowLoadCallback() {
     setTimeout(timeoutCallback, 5000);
   }
+  new Image().src = imageLink;
   window.addEventListener('load', windowLoadCallback, false);
   return (
     <div>
@@ -27,6 +28,7 @@ const Container = ({ dispatch, showPrompt }) => {
             <div className={styles.mask} onClick={hidePrompt}>
             </div>
             <div className={styles.prompt}>
+              <img src={imageLink} />
               <div className={styles.promptContent}>
                 <div className={styles.titles}>
                   <span className={styles.titleBig}>
@@ -63,12 +65,14 @@ const Container = ({ dispatch, showPrompt }) => {
 
 Container.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  showPrompt: PropTypes.bool.isRequired
+  showPrompt: PropTypes.bool.isRequired,
+  imageLink: PropTypes.string.isRequired
 };
 
-const mapStateToProps = ({ prompt }) => (
+const mapStateToProps = ({ prompt: { showPrompt, imageLink } }) => (
   {
-    showPrompt: prompt.showPrompt
+    showPrompt,
+    imageLink
   }
 );
 

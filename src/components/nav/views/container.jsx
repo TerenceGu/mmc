@@ -8,7 +8,7 @@ import SearchBar from './search-bar.jsx';
 import Login from './sign-in.jsx';
 import ShoppingBag from './shopping-bag.jsx';
 
-import { setLowerFix, } from '../data/actions.js';
+import { setLowerFix } from '../data/actions.js';
 
 import styles from './container.scss';
 
@@ -26,7 +26,7 @@ const Container = ({ dispatch, lowerFix, categories }) => {
     }
     window.addEventListener('scroll', scrollListener, false);
   }
-  window.addEventListener("load", windowloadCallback, false);
+  window.addEventListener('load', windowloadCallback, false);
   return (
     <div className={styles.nav}>
       <div className={styles.upperHeader} ref={ node => { upper = upper || node; } }>
@@ -117,7 +117,6 @@ Container.propTypes = {
   dispatch: PropTypes.func.isRequired,
   lowerFix: PropTypes.bool.isRequired,
   categories: PropTypes.object.isRequired
-  
 };
 
 const mapStateToProps = ({ nav }) => (

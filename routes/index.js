@@ -16,12 +16,10 @@ router.get('/', function* () {
     trending: Promise.resolve(true),
     best_seller: Promise.resolve(true),
     main_header: Promise.resolve(true),
-    prompt: Promise.resolve(true)
-    main_header: Promise.resolve(true),
+    prompt: Promise.resolve(true),
     subscribe: Promise.resolve(true)
   });
 });
-
 
 module.exports = router;
 
