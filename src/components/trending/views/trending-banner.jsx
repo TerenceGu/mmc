@@ -1,4 +1,5 @@
 import React from 'react';
+import Lazyload from 'react-lazyload';
 import styles from './trending-banner.scss';
 
 const trendingBanners = [
@@ -27,7 +28,9 @@ const TrendingBanner = () => (
     {trendingBanners.map((item) =>
       (
         <a className={styles[item.id]} title={item.title} href={item.href} key={item.id}>
-          <img src={item.img} />
+          <Lazyload height={650}>
+            <img src={item.img} />
+          </Lazyload>
         </a>
       )
     )}

@@ -3,13 +3,16 @@
  */
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
+import LazyLoad from 'react-lazyload';
 import styles from './pic.scss';
 
 const Container = ({ picinfo, currentCurrency }) =>
   (
     <div className={ styles.pic }>
       <a href={ picinfo.link }>
-        <img src={ picinfo.src } />
+        <LazyLoad height={292}>
+          <img src={ picinfo.src } />
+        </LazyLoad>
       </a>
       <a href={ picinfo.link }>
         <div className={ styles.disc }>
