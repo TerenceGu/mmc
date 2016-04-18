@@ -18,8 +18,13 @@
   margin: auto;
   width: 750px;
   height: 400px;
-  background: url('http://statics.makemechic.com/image/getoff_bg_v282b2ab.jpg') 0 0 no-repeat;
   z-index: 1001;
+  img {
+    height: 100%;
+    position: absolute;
+    left:0;
+    top: 0;
+  }
   :local(.promptCloseBtn){
     position: absolute;
     right: 5px;

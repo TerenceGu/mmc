@@ -26,7 +26,7 @@ const Container = ({ dispatch, lowerFix, categories }) => {
     }
     window.addEventListener('scroll', scrollListener, false);
   }
-  window.addEventListener("load", windowloadCallback, false);
+  window.addEventListener('load', windowloadCallback, false);
   return (
     <div className={styles.nav}>
       <div className={styles.upperHeader} ref={ node => { upper = upper || node; } }>
