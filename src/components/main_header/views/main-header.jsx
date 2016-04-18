@@ -3,9 +3,7 @@ import { connect } from 'react-redux';
 import { changeMainHeaderVisibility } from '../data/actions';
 import styles from './main-header.scss';
 
-const mainHeaderBanner = { src: 'https://img.makemechic.com/images/makemechic.com/1460537726632914195.jpg', href: '' };
-
-const MainHeader = ({ dispatch, showHeader }) => {
+const MainHeader = ({ dispatch, showHeader, mainHeaderBanner }) => {
   const hideHeader = () => {
     dispatch(changeMainHeaderVisibility(false));
   };
@@ -22,11 +20,13 @@ const MainHeader = ({ dispatch, showHeader }) => {
 
 MainHeader.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  showHeader: PropTypes.bool.isRequired
+  showHeader: PropTypes.bool.isRequired,
+  mainHeaderBanner: PropTypes.objectOf(PropTypes.string)
 };
 
 const mapStateToProps = ({ main_header }) => ({
-  showHeader: main_header.mainHeaderVisible
+  showHeader: main_header.mainHeaderVisible,
+  mainHeaderBanner: main_header.mainHeaderBanner
 });
 
 export default connect(mapStateToProps)(MainHeader);

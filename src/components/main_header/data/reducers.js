@@ -1,5 +1,6 @@
 const defaultState = {
-  mainHeaderVisible: true
+  mainHeaderVisible: true,
+  mainHeaderBanner: { src: 'https://img.makemechic.com/images/makemechic.com/1460537726632914195.jpg', href: '' }
 };
 
 export default (state = defaultState, action) => {

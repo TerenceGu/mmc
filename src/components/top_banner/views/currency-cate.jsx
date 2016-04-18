@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { changeCurrencyName } from '../../../common/state/currency/actions.js';
 import styles from './currency-cate.scss';
+
 const CurrencyCate = ({ dispatch, currency, currentCurrency }) => {
   const selectCurrency = index => () => {
     dispatch(changeCurrencyName(index));
