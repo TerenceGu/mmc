@@ -8,14 +8,14 @@ import SearchBar from './search-bar.jsx';
 import Login from './sign-in.jsx';
 import ShoppingBag from './shopping-bag.jsx';
 
-import { setLowerFix } from '../data/actions.js';
+import { setLowerFix, } from '../data/actions.js';
 
 import styles from './container.scss';
 
 const Container = ({ dispatch, lowerFix, categories }) => {
   let lower;
   let upper;
-  window.onload = function () {
+  function windowloadCallback() {
     function scrollListener() {
       if (lower.getBoundingClientRect().top <= 0
         && upper.getBoundingClientRect().bottom <= 0) {
@@ -25,12 +25,13 @@ const Container = ({ dispatch, lowerFix, categories }) => {
       }
     }
     window.addEventListener('scroll', scrollListener, false);
-  };
+  }
+  window.addEventListener("load", windowloadCallback, false);
   return (
     <div className={styles.nav}>
       <div className={styles.upperHeader} ref={ node => { upper = upper || node; } }>
         <div className={styles.upperHeaderInner}>
-          <a href="#" className={styles.logoLink}></a>
+          <a href="#" className={styles.logoLink} />
           <div className={styles.headerRight}>
             <div className={styles.logoRight}>
               <ShoppingBag goodsNum={0} />
@@ -68,8 +69,8 @@ const Container = ({ dispatch, lowerFix, categories }) => {
                     :
                     <div className={ classnames(styles.list, styles.multiUl) }>
                       {
-                        Object.keys(categories[value].children).map(ul => (
-                           <ul>
+                        Object.keys(categories[value].children).map((ul, indexul) => (
+                           <ul key={indexul}>
                              {
                                Object.keys(categories[value].children[ul]).map((subkey, index2) => (
                                  <li key={index2}>
@@ -115,13 +116,15 @@ const Container = ({ dispatch, lowerFix, categories }) => {
 Container.propTypes = {
   dispatch: PropTypes.func.isRequired,
   lowerFix: PropTypes.bool.isRequired,
-  categories: PropTypes.bool.isRequired
+  categories: PropTypes.object.isRequired
+  
 };
 
 const mapStateToProps = ({ nav }) => (
   {
     lowerFix: nav.lowerFix,
-    categories: nav.categories
+    categories: nav.categories,
+    showPrompt: nav.showPrompt
   }
 );
 export default connect(mapStateToProps)(Container);

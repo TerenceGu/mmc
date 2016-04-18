@@ -31,8 +31,15 @@ const CurrencyCate = ({ dispatch, currency, currentCurrency }) => {
 };
 
 CurrencyCate.propTypes = {
-  currency: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOf(['string', 'number']))),
-  currentCurrency: PropTypes.number.isRequired,
+  currency:
+    PropTypes.arrayOf(
+      PropTypes.objectOf(
+        PropTypes.oneOfType(
+          [PropTypes.string, PropTypes.number]
+        )
+      )
+    ),
+  currentCurrency: PropTypes.string.isRequired,
   dispatch: PropTypes.func.isRequired
 };
 

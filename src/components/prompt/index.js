@@ -4,5 +4,6 @@
 import reducers from './data/reducers';
 
 export default {
-  nav: reducers
+  prompt: reducers
 };
+

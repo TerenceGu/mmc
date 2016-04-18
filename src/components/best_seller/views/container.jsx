@@ -22,13 +22,13 @@ const Container = ({ dispatch, images, currentCurrency, pageInfo }) => {
   }
   return (
     <div className={styles.outermost}>
-      <div className={ styles.bestSellerOuter }>
+      <div className={styles.bestSellerOuter}>
         <InnerContainer
-          currentCurrency={ currentCurrency }
-          totalWidth={ pageInfo.totalWidth }
-          pageWidth={ pageInfo.pageWidth }
-          images={ images }
-          pageIndex= { pageInfo.pageIndex }
+          currentCurrency={currentCurrency}
+          totalWidth={pageInfo.totalWidth}
+          pageWidth={pageInfo.pageWidth}
+          images={images}
+          pageIndex= {pageInfo.pageIndex}
         />
       </div>
       {
@@ -54,7 +54,7 @@ const Container = ({ dispatch, images, currentCurrency, pageInfo }) => {
 };
 
 Container.propTypes = {
-  currentCurrency: PropTypes.string.required,
+  currentCurrency: PropTypes.string.isRequired,
   dispatch: PropTypes.func.isRequired,
   images: PropTypes.array.isRequired,
   pageInfo: PropTypes.object.isRequired
