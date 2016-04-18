@@ -1,0 +1,24 @@
+:local(.container){
+  height: 40px;
+  width: 100%;
+  margin:0;
+  padding:0;
+  >a{
+    height: 40px;
+    display: block;
+    >img{
+      width: 100%;
+    }
+  }
+}
+
+:local(.close){
+  position: absolute;
+  top: 11px;
+  right: 16px;
+  background: url(./images/close.png) no-repeat scroll center center transparent;
+  width: 12px;
+  height: 12px;
+  padding: 3px;
+  cursor:pointer;
+}

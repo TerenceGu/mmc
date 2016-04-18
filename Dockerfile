@@ -4,6 +4,8 @@ MAINTAINER yuji
 
 ENV PORT 80
 
+ENV NODE_ENV production
+
 RUN apt-get update
 
 RUN apt-get -y install wget
@@ -16,10 +18,10 @@ RUN cd .. && rm -fr ./node-v4.3.1-linux-x64 && rm ./node-v4.3.1-linux-x64.tar.gz
 
 COPY . /usr/src/app
 
-RUN cd /usr/src/app && npm install
+RUN cd /usr/src/app && npm install && npm run build
 
 WORKDIR /usr/src/app
 
-CMD ["npm", "start"]
+CMD ["node", "--harmony_destructuring", "bin/www"]
 
 EXPOSE 80
