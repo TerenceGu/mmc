@@ -3,12 +3,7 @@ import { connect } from 'react-redux';
 import { changePopupVisibility } from '../data/actions';
 import styles from './header-info.scss';
 
-const headerLinks = [
-  { type: 'popup', content: '<b>Free</b> Shipping Over $29', href: '#1' },
-  { type: 'link', content: '<b>20% OFF</b> Your First Order', href: '#first order' }
-];
-
-const HeaderInfo = ({ dispatch }) => {
+const HeaderInfo = ({ dispatch, headerLinks }) => {
   const showPopupWindow = e => {
     dispatch(changePopupVisibility(true));
     e.preventDefault();
@@ -40,7 +35,12 @@ const HeaderInfo = ({ dispatch }) => {
 };
 
 HeaderInfo.propTypes = {
-  dispatch: PropTypes.func.isRequired
+  dispatch: PropTypes.func.isRequired,
+  headerLinks: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
 };
 
-export default connect()(HeaderInfo);
+const mapStateToProps = ({ top_banner }) => ({
+  headerLinks: top_banner.headerLinks
+});
+
+export default connect(mapStateToProps)(HeaderInfo);
