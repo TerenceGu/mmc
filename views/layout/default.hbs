@@ -19,12 +19,7 @@
     <!--页面布局css和组件的css-->
     {{{cssForPage}}}
     <!--稳定的全局js，例如shim-->
-    <!--[if lte IE 9]>
-    {{{shimJs "ie8-shim.min.js"}}}
-    <![endif]-->
-    {{{shimJs "es5-shim.min.js"}}}
-
-    {{{shimJs "es6-shim.min.js"}}}
+    {{{shimJs "ie8-shim.min.js" "es5-shim.min.js" "es6-shim.min.js"}}}
 
     {{{js "manifest"}}}
 </head>
