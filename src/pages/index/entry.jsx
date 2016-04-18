@@ -21,8 +21,7 @@ window.reduxState = createStore(combineReducers(
     topBanner,
     trending,
     mainHeader,
-    prompt
-    mainHeader,
+    prompt,
     subscribe
   )
 ));
