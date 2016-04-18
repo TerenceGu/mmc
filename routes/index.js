@@ -15,7 +15,8 @@ router.get('/', function* () {
     index_banner: Promise.resolve(true),
     trending: Promise.resolve(true),
     best_seller: Promise.resolve(true),
-    main_header: Promise.resolve(true)
+    main_header: Promise.resolve(true),
+    prompt: Promise.resolve(true)
   });
 });
 
