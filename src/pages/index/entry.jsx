@@ -6,6 +6,7 @@ import nav from '../../components/nav';
 import topBanner from '../../components/top_banner';
 import trending from '../../components/trending';
 import mainHeader from '../../components/main_header';
+import subscribe from '../../components/subscribe';
 import prompt from '../../components/prompt';
 
 import './style.scss';
@@ -21,5 +22,7 @@ window.reduxState = createStore(combineReducers(
     trending,
     mainHeader,
     prompt
+    mainHeader,
+    subscribe
   )
 ));

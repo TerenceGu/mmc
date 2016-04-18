@@ -1,0 +1,51 @@
+:local(.container){
+  font-family: 'Proxima Nova', Tahoma;
+  font-size: 13px;
+  h2{
+    font-family: "Proxima Nova bold";
+    font-size: 14px;
+  }
+  input[type="text"]{
+    width: 160px;
+    color: #fff;
+    text-indent: 5px;
+    border: 1px solid #ababab;
+    margin-right: 5px;
+    height: 26px;
+    line-height: 25px;
+    background: none;
+    padding:0;
+    &::-webkit-input-placeholder{
+      opacity: 1;
+      color:#fff;
+    }
+    &:-moz-placeholder{
+      opacity: 1;
+      color:#fff;
+    }
+    &:-ms-input-placeholder{
+      opacity: 1;
+      color:#fff;
+    }
+    &::-moz-placeholder{
+      opacity: 1;
+      color:#fff;
+    }
+  }
+  input[type="button"]{
+    width: 105px;
+    height: 28px;
+    color: #fff;
+    background-color: #ff3399;
+    border: none;
+    cursor: pointer;
+    padding:0;
+  }
+  div{
+    display: none;
+    line-height: 14px;
+    margin-top: 5px;
+    color: red;
+    text-transform: none;
+  }
+}
