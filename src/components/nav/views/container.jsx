@@ -24,9 +24,9 @@ const Container = ({ dispatch, lowerFix, categories }) => {
     function scrollListener() {
       if (!upper) return;
       if (upper.getBoundingClientRect().bottom <= 0) {
-        requestAnimationFrame(() => dispatch(setLowerFix(true)));
+        setTimeout(() => dispatch(setLowerFix(true)), 0);
       } else if (upper.getBoundingClientRect().bottom > 0) {
-        requestAnimationFrame(() => dispatch(setLowerFix(false)));
+        setTimeout(() => dispatch(setLowerFix(false)), 0);
       }
     }
     addHandler(window, 'scroll', scrollListener);
