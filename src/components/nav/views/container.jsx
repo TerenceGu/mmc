@@ -11,10 +11,8 @@ import ShoppingBag from './shopping-bag.jsx';
 import { setLowerFix } from '../data/actions.js';
 
 import styles from './container.scss';
-
+let upper;
 const Container = ({ dispatch, lowerFix, categories }) => {
-  let lower;
-  let upper;
   function addHandler(target, event, handler) {
     if (target.addEventListener) {
       target.addEventListener(event, handler, false);
@@ -24,6 +22,7 @@ const Container = ({ dispatch, lowerFix, categories }) => {
   }
   function windowloadCallback() {
     function scrollListener() {
+      if (!upper) return;
       if (upper.getBoundingClientRect().bottom <= 0) {
         requestAnimationFrame(() => dispatch(setLowerFix(true)));
       } else if (upper.getBoundingClientRect().bottom > 0) {
@@ -35,7 +34,7 @@ const Container = ({ dispatch, lowerFix, categories }) => {
   addHandler(window, 'load', windowloadCallback);
   return (
     <div className={styles.nav}>
-      <div className={styles.upperHeader} ref={ node => { upper = upper || node; } }>
+      <div className={styles.upperHeader} ref={ node => { upper = node; } } >
         <div className={styles.upperHeaderInner}>
           <a href="#" className={styles.logoLink} />
           <div className={styles.headerRight}>
@@ -50,7 +49,7 @@ const Container = ({ dispatch, lowerFix, categories }) => {
         </div>
       </div>
       <div className={lowerFix ? classnames(styles.lowerHeader, styles.fix) :
-      classnames(styles.lowerHeader)} ref={ node => { lower = lower || node; } }
+        classnames(styles.lowerHeader)}
       >
       <ul>
         {
