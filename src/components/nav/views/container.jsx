@@ -17,8 +17,7 @@ const Container = ({ dispatch, lowerFix, categories }) => {
   let upper;
   function windowloadCallback() {
     function scrollListener() {
-      if (lower.getBoundingClientRect().top <= 0
-        && upper.getBoundingClientRect().bottom <= 0) {
+      if (upper.getBoundingClientRect().bottom <= 0) {
         requestAnimationFrame(() => dispatch(setLowerFix(true)));
       } else if (upper.getBoundingClientRect().bottom > 0) {
         requestAnimationFrame(() => dispatch(setLowerFix(false)));
@@ -70,33 +69,27 @@ const Container = ({ dispatch, lowerFix, categories }) => {
                     <div className={ classnames(styles.list, styles.multiUl) }>
                       {
                         Object.keys(categories[value].children).map((ul, indexul) => (
-                           <ul key={indexul}>
-                             {
-                               Object.keys(categories[value].children[ul]).map((subkey, index2) => (
-                                 <li key={index2}>
-                                   <h1>
-                                     <a href={categories[value].children[ul][subkey].link}>
-                                       {subkey}
-                                     </a>
-                                   </h1>
-                                   {
-                                     categories[value].children[ul][subkey].children ?
-                                       Object.keys(categories[value].children[ul][subkey].children)
-                                         .map((subkey2, index3) => (
-                                         <li key={index3}>
-                                           <a href={
-                                            categories[value].children[ul][subkey].children[subkey2]
-                                           }
-                                           >
-                                             {subkey2}
-                                           </a>
-                                         </li>
-                                       )) : null
-                                   }
-                                 </li>
-                               ))
-                             }
-                           </ul>
+                          <ul key={indexul}>
+                            {
+                              Object.keys(categories[value].children[ul]).map((subkey, index2) => (
+                                <li key={index2}>
+                                  {
+                                    categories[value].children[ul][subkey].isheader ? (
+                                      <h1>
+                                        <a href={categories[value].children[ul][subkey].link}>
+                                          {subkey}
+                                        </a>
+                                      </h1>
+                                    ) : (
+                                      <a href={categories[value].children[ul][subkey].link}>
+                                        {subkey}
+                                      </a>
+                                    )
+                                  }
+                                </li>
+                              ))
+                            }
+                          </ul>
                         ))
                       }
                     </div>
