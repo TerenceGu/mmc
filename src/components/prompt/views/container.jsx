@@ -9,6 +9,13 @@ import { setShowPrompt } from '../data/actions.js';
 import styles from './container.scss';
 
 const Container = ({ dispatch, showPrompt, imageLink }) => {
+  function addHandler(target, event, handler) {
+    if (target.addEventListener) {
+      target.addEventListener(event, handler, false);
+    } else {
+      target.attachEvent(`on${event}`, handler);
+    }
+  }
   function timeoutCallback() {
     dispatch(setShowPrompt(true));
   }
@@ -19,7 +26,7 @@ const Container = ({ dispatch, showPrompt, imageLink }) => {
     setTimeout(timeoutCallback, 5000);
   }
   new Image().src = imageLink;
-  window.addEventListener('load', windowLoadCallback, false);
+  addHandler(window, 'load', windowLoadCallback);
   return (
     <div>
       {

@@ -15,6 +15,13 @@ import styles from './container.scss';
 const Container = ({ dispatch, lowerFix, categories }) => {
   let lower;
   let upper;
+  function addHandler(target, event, handler) {
+    if (target.addEventListener) {
+      target.addEventListener(event, handler, false);
+    } else {
+      target.attachEvent(`on${event}`, handler);
+    }
+  }
   function windowloadCallback() {
     function scrollListener() {
       if (upper.getBoundingClientRect().bottom <= 0) {
@@ -23,9 +30,9 @@ const Container = ({ dispatch, lowerFix, categories }) => {
         requestAnimationFrame(() => dispatch(setLowerFix(false)));
       }
     }
-    window.addEventListener('scroll', scrollListener, false);
+    addHandler(window, 'scroll', scrollListener);
   }
-  window.addEventListener('load', windowloadCallback, false);
+  addHandler(window, 'load', windowloadCallback);
   return (
     <div className={styles.nav}>
       <div className={styles.upperHeader} ref={ node => { upper = upper || node; } }>
