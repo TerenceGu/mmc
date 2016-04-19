@@ -1,9 +1,11 @@
 {
   "presets": [
-    "es2015",
+    "es2015-loose",
     "react"
   ],
   "plugins": [
-    "transform-react-jsx"
+    "transform-react-jsx",
+    "transform-es3-member-expression-literals",
+    "transform-es3-property-literals"
   ]
 }
