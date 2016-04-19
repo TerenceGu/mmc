@@ -14,10 +14,8 @@ const Container = ({ picinfo, currentCurrency }) =>
           <img src={ picinfo.src } />
         </LazyLoad>
       </a>
-      <a href={ picinfo.link }>
-        <div className={ styles.disc }>
-          { picinfo.disc }
-        </div>
+      <a href={ picinfo.link } className={styles.link}>
+        { picinfo.disc }
       </a>
       <div className={ styles.prices }>
         <div className={ styles.originalPrice }>

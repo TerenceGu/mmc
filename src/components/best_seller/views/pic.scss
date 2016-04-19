@@ -4,7 +4,8 @@
   height: 100%;
   font-family: 'Proxima Nova', Tahoma;
   font-size: 13px;
-  :local(.disc) {
+  :local(.link) {
+    display: block;
     font-style: italic;
   }
   :local(.prices) {
