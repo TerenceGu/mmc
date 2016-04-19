@@ -27,74 +27,74 @@ const defaultState = {
         list1: {
           DRESSES: {
             link: '#',
-            children: {
-              'Boho Dresses': '#',
-              'Casual Dresses': '#',
-              'Floral Dresses': '#',
-              'Maxl Dresses': '#',
-              'Party Dresses': '#',
-              'Bodycon Dresses': '#',
-              'Lace Dresses': '#',
-              'Backless Dresses': '#',
-              'MIDI Dresses': '#',
-              'CutOut Dresses': '#',
-              'Skater Dresses': '#'
-            }
-          }
+            isheader: true
+          },
+          'Boho Dresses': { link: '#' },
+          'Casual Dresses': { link: '#' },
+          'Floral Dresses': { link: '#' },
+          'Maxl Dresses': { link: '#' },
+          'Party Dresses': { link: '#' },
+          'Bodycon Dresses': { link: '#' },
+          'Lace Dresses': { link: '#' },
+          'Backless Dresses': { link: '#' },
+          'MIDI Dresses': { link: '#' },
+          'CutOut Dresses': { link: '#' },
+          'Skater Dresses': { link: '#' }
         },
         list2: {
           OUTERWEAR: {
             link: '#',
-            children: {
-              Coats: '#',
-              Jackets: '#',
-              Blazers: '#',
-              Vests: '#'
-            }
+            isheader: true
           },
+          Coats: { link: '#' },
+          Jackets: { link: '#' },
+          Blazers: { link: '#' },
+          Vests: { link: '#' },
           TOPS: {
             link: '#',
-            children: {
-              'T-shirts': '#',
-              'Tank Top': '#',
-              Bodysuits: '#',
-              'Blouses & Shirts': '#',
-              Bralettes: '#'
-            }
-          }
+            isheader: true
+          },
+          'T-shirts': { link: '#' },
+          'Tank Top': { link: '#' },
+          Bodysuits: { link: '#' },
+          'Blouses & Shirts': { link: '#' },
+          Bralettes: { link: '#' }
         },
         list3: {
           Sweaters: {
             link: '#',
-            children: {
-              Jumpers: '#',
-              Cardigans: '#',
-              Vests: '#'
-            }
+            isheader: true
           },
+          Jumpers: { link: '#' },
+          Cardigans: { link: '#' },
+          Vests: { link: '#' },
           Bottoms: {
             link: '#',
-            children: {
-              Pants: '#',
-              Skirts: '#',
-              Shorts: '#',
-              Leggins: '#'
-            }
+            isheader: true
           },
+          Pants: { link: '#' },
+          Skirts: { link: '#' },
+          Shorts: { link: '#' },
+          Leggins: { link: '#' },
           'JUMPSUITS & ROMPERS': {
-            link: '#'
+            link: '#',
+            isheader: true
           },
           'Hoodies & Sweatshirts': {
-            link: '#'
+            link: '#',
+            isheader: true
           },
           SWIMWEAR: {
-            link: '#'
+            link: '#',
+            isheader: true
           },
           KIMONOS: {
-            link: '#'
+            link: '#',
+            isheader: true
           },
           'CO-ORDINATES': {
-            link: '#'
+            link: '#',
+            isheader: true
           }
         }
       }
@@ -166,7 +166,8 @@ const defaultState = {
         Swimwear: '#'
       }
     }
-  }
+  },
+  showPrompt: false
 };
 
 export default (state = defaultState, action) => {
@@ -176,6 +177,10 @@ export default (state = defaultState, action) => {
     case 'NAV_SET_LOWER_FIX':
       return Object.assign({}, state, {
         lowerFix: action.flag
+      });
+    case 'NAV_SHOW_PROMPT':
+      return Object.assign({}, state, {
+        show
       });
     default:
       return state;

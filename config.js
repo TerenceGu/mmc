@@ -14,10 +14,10 @@ module.exports = {
   mapJson: path.join(__dirname, 'fe', 'dist'),
   hostname,
   uri: {
-    baseUri: process.env.STATIC_ADDRESS || `localhost:${port}/`,
+    baseUri: process.env.STATIC_ADDRESS || `192.168.0.75:${port}/`,
     protocol: '//'
   },
-  domain: process.env.ADDRESS || `//localhost:${port}/`,
+  domain: process.env.ADDRESS || `//192.168.0.75:${port}/`,
   hbs: {
     viewPath: path.join(__dirname, 'views'),
     layoutsPath: path.join(__dirname, 'views', 'layout'),
